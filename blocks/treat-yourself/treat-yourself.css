@@ -13,6 +13,8 @@ position: relative;
 color: #ffff;
 font-size: 30px;
 line-height: 35px;
+font-family: 'Roboto Condensed';
+    font-weight: 700;
 text-transform: uppercase;
 padding:50% 0;
 text-align: center;
