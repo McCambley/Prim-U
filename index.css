@@ -1,2 +1,11 @@
+/* normalize */
+@import url(./vendor/normalize.css);
+
+/* fonts */
+@import url(./fonts/fonts.css);
+
+/* blocks */
+@import url(./blocks/page/page.css);
 @import url(./blocks/heading/heading.css);
 @import url(./blocks/treat-yourself/treat-yourself.css);
+/* modifiers */
