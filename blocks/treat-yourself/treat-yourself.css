@@ -10,7 +10,6 @@
 }
 .treat-yourself__card{
 position: relative;
-max-width: 400px;
 color: #ffff;
 font-size: 30px;
 line-height: 35px;
@@ -46,10 +45,9 @@ background-position: center;
     filter: grayscale(0%);
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 680px) {
     .treat-yourself__card-area{
         grid-template-columns: repeat(3, 1fr);
-        ;
     }
     .treat-yourself__card{
         font-size: 38px;
