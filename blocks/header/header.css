@@ -1,0 +1,44 @@
+.header {
+  padding: 10px;
+}
+
+.header__content {
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.header__logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 44px;
+}
+
+.header__logo {
+  width: 100px;
+}
+
+.header__hamburger {
+  width: 30px;
+}
+
+.header__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header__link {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 20px;
+}

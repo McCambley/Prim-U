@@ -6,5 +6,6 @@
 
 /* blocks */
 @import url(./blocks/page/page.css);
+@import url(./blocks/header/header.css);
 
 /* modifiers */
