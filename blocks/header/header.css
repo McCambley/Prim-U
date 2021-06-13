@@ -3,11 +3,13 @@
 }
 
 .header__content {
-  background: #fff;
+  background: #000;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   padding: 16px;
+  height: 40px;
+  overflow: hidden;
 }
 
 .header__logo-container {
@@ -19,6 +21,22 @@
 
 .header__logo {
   width: 100px;
+  fill: #fff;
+  transition: fill 0.2s ease;
+  cursor: pointer;
+}
+
+.header__logo:hover {
+  fill: #683d83;
+}
+
+.header__logo:hover .header__logo-accent {
+  fill: #a791b8;
+}
+
+.header__logo-accent {
+  fill: #a6a6a6;
+  transition: fill 0.2s ease;
 }
 
 .header__hamburger {
@@ -41,4 +59,9 @@
   line-height: 24px;
   margin: 0;
   margin-bottom: 20px;
+  transition: color 0.1s ease;
+}
+
+.header__link:hover {
+  color: #683d83;
 }
