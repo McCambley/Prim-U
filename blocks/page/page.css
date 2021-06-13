@@ -1,3 +1,7 @@
 .page {
-    position: relative;
+  position: relative;
+  /* temporary for dev */
+  background: black;
+  font-family: 'Roboto Condensed';
+  scroll-behavior: smooth;
 }
