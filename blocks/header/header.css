@@ -3,13 +3,19 @@
 }
 
 .header__content {
-  background: #000;
+  background-color: transparent;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   padding: 16px;
   height: 40px;
   overflow: hidden;
+  transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+.header__content_open {
+  height: 216px;
+  background-color: #fff;
 }
 
 .header__logo-container {
@@ -30,6 +36,10 @@
   fill: #683d83;
 }
 
+.header__logo_opened {
+  fill: #000;
+}
+
 .header__logo:hover .header__logo-accent {
   fill: #a791b8;
 }
@@ -41,6 +51,7 @@
 
 .header__hamburger {
   width: 30px;
+  cursor: pointer;
 }
 
 .header__links {
