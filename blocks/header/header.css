@@ -1,5 +1,8 @@
 .header {
   padding: 10px;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header__content {
@@ -75,4 +78,44 @@
 
 .header__link:hover {
   color: #683d83;
+}
+
+@media (min-width: 768px) {
+  .header * {
+    border: 1px solid red;
+  }
+  .header {
+    padding: 0;
+  }
+  .header__content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+  }
+
+  .header__logo-container {
+    margin: 0;
+  }
+
+  .header__logo {
+    width: 158px;
+  }
+
+  .header__links {
+    flex-direction: row;
+  }
+
+  .header__link {
+    color: #fff;
+    margin-bottom: 0;
+    margin-right: 40px;
+  }
+  .header__link:last-child {
+    margin-right: 0;
+  }
+
+  .header__hamburger {
+    display: none;
+  }
 }
