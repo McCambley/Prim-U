@@ -55,11 +55,16 @@
 }
 
 .header__logo_scrolled:hover {
+  /* fill: #fff; */
   fill: #fff;
   opacity: 0.7;
 }
 
 .header__logo_opened {
+  fill: #000;
+}
+
+.header__logo_opened:hover {
   fill: #000;
 }
 
@@ -130,6 +135,16 @@
 
   .header__logo_scrolled {
     fill: #683d83;
+  }
+
+  .header__logo_scrolled:hover {
+    fill: #000;
+    opacity: 1;
+  }
+
+  .header__logo_scrolled:hover .header__logo-accent_scrolled {
+    fill: #a6a6a6;
+    opacity: 1;
   }
 
   .header__logo-accent_scrolled {
