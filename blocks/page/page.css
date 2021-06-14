@@ -3,6 +3,6 @@
   font-family: 'Roboto Condensed';
   scroll-behavior: smooth;
   /* temporary for dev */
-  background: black;
-  min-height: 200vh;
+  background-color: #fff;
+  min-height: 300vh;
 }
