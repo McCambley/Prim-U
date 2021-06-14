@@ -45,12 +45,18 @@
 .header__logo {
   width: 100px;
   fill: #fff;
-  transition: fill 0.2s ease;
+  transition: fill 0.2s ease, opacity 0.2s ease;
+  opacity: 1;
   cursor: pointer;
 }
 
 .header__logo:hover {
   fill: #683d83;
+}
+
+.header__logo_scrolled:hover {
+  fill: #fff;
+  opacity: 0.7;
 }
 
 .header__logo_opened {
