@@ -7,7 +7,6 @@ const logo = document.querySelector('.header__logo');
 const logoAccent = document.querySelector('.header__logo-accent');
 const headerLinks = Array.from(document.querySelectorAll('.header__link'));
 const hero = document.querySelector('.hero');
-const heroHeight = hero.offsetHeight;
 
 // open or close navigation on mobile layous
 function toggleNav() {
@@ -37,6 +36,7 @@ function toggleNav() {
 
 // recolor menu items when user scrolls past hero
 function recolorScrolledMenu() {
+  const heroHeight = hero.offsetHeight;
   // if window is wider than the first desktop breakpoint
   // and the user has scrolled beyond the hero block
   if (window.innerWidth > 0 && window.scrollY + 100 > heroHeight) {
@@ -64,7 +64,9 @@ function toggleNavOnOverlay(e) {
 }
 
 hamburger.addEventListener('click', toggleNav);
+// TODO refactor this to update less often than every scroll
 window.addEventListener('scroll', recolorScrolledMenu);
+// TODO refactor this to update less often than every resize
 window.addEventListener('resize', recolorScrolledMenu);
 
 // HERO FUNCTIONALITY

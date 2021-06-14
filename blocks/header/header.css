@@ -94,9 +94,6 @@
 }
 
 @media (min-width: 768px) {
-  .header * {
-    border: 1px solid red;
-  }
   .header {
     padding: 0;
   }
@@ -158,5 +155,11 @@
 @media (min-width: 1024px) {
   .header__content {
     padding: 60px;
+  }
+
+  .header__content_scrolled {
+    padding: 16px 48px;
+    background: #fff;
+    border-radius: 0;
   }
 }
