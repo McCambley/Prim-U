@@ -8,6 +8,9 @@ padding: 0 10px;
     list-style: none;
     padding: 0;
 }
+.treat-yourself__card-container{
+    overflow: hidden;
+}
 .treat-yourself__card{
 position: relative;
 text-transform: uppercase;
@@ -17,6 +20,9 @@ background-position: center;
     background-size: cover;
     text-overflow: ellipsis;
     
+}
+.treat-yourself__card-container:hover .treat-yourself__card{
+    transform: scale(1.2);
 }
 .treat-yourself__card-text{
     position: absolute;
