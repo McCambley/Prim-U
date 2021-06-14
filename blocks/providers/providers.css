@@ -1,0 +1,71 @@
+.providers{
+    padding: 0 10px;
+}
+.provider__card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.provider__image{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 326px;
+    position: relative;   
+}
+.provider__image_type_freelance{
+    background-image: url(../../images/freelancers.png);
+}
+.provider__image_type_business{
+    background-image: url(../../images/salonSpa.png);
+}
+.provider__card-content{
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+.provider__card-heading{
+    color: #fff;
+    text-align: center;    
+}
+.provider__card-button{
+    color: #683D83;
+    font-size: 24px;
+    padding: 16px 50px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.provider__card-button:hover{
+    color: #fff;
+    background-color:#683D83 ;
+}
+.provider__text{
+    display: block;
+}
+@media screen and (min-width: 680px) {
+    .providers{
+        padding: 0, 40px;
+    }
+    .provider__card-area{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 46px;
+
+    }
+}
+@media screen and (min-width: 1000px) {
+    .providers{
+        padding: 0, 60px;
+    }
+    .provider__card-area{
+        gap: 60px;
+    }
+    .provider__image{
+        height: 460px;
+    }
+    .provider__card-heading{
+        line-height: 460px;
+    }
+}
