@@ -37,9 +37,8 @@ function toggleNav() {
 // recolor menu items when user scrolls past hero
 function recolorScrolledMenu() {
   const heroHeight = hero.offsetHeight;
-  // if window is wider than the first desktop breakpoint
-  // and the user has scrolled beyond the hero block
-  if (window.innerWidth > 0 && window.scrollY + 100 > heroHeight) {
+  // if the user has scrolled beyond the hero block
+  if (window.scrollY + 100 > heroHeight) {
     headerContainer.classList.add('header__content_scrolled');
     logo.classList.add('header__logo_scrolled');
     logoAccent.classList.add('header__logo-accent_scrolled');

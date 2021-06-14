@@ -22,16 +22,17 @@
   height: 36px;
   overflow: hidden;
   transition: height 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 0px 12px rgb(0 0 0 / 30%);
 }
 
 .header__content_scrolled {
   background-color: #683d83;
+  box-shadow: 0 0px 12px rgb(0 0 0 / 30%);
 }
 
 .header__content_open {
   height: 216px;
   background-color: #fff;
+  box-shadow: 0 0px 12px rgb(0 0 0 / 30%);
 }
 
 .header__logo-container {
