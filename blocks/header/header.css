@@ -65,11 +65,9 @@
 }
 
 .header__logo_opened:hover {
-  fill: #000;
-}
-
-.header__logo:hover .header__logo-accent {
-  fill: #a791b8;
+  /* fill: #000; */
+  fill: #683d83;
+  opacity: 1;
 }
 
 .header__logo-accent {
@@ -77,9 +75,12 @@
   transition: fill 0.2s ease;
 }
 
+.header__logo:hover .header__logo-accent {
+  fill: #a791b8;
+}
+
 .header__hamburger {
   width: 30px;
-  cursor: pointer;
 }
 
 .header__links {
@@ -142,13 +143,13 @@
     opacity: 1;
   }
 
+  .header__logo-accent_scrolled {
+    fill: #a791b8;
+  }
+
   .header__logo_scrolled:hover .header__logo-accent_scrolled {
     fill: #a6a6a6;
     opacity: 1;
-  }
-
-  .header__logo-accent_scrolled {
-    fill: #a791b8;
   }
 
   .header__links {

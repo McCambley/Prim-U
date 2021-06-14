@@ -8,11 +8,18 @@ const logoAccent = document.querySelector('.header__logo-accent');
 const headerLinks = Array.from(document.querySelectorAll('.header__link'));
 const hero = document.querySelector('.hero');
 
+// toggle menuStatus on overlay click
+function toggleNavOnOverlay(e) {
+  if (e.target.classList.contains('header_open')) {
+    toggleNav();
+  }
+}
+
 // open or close navigation on mobile layous
 function toggleNav() {
   // check if the menu is open already
-  const menuStatus = headerContainer.classList.contains('header__content_open');
-  if (!menuStatus) {
+  const menuOpen = headerContainer.classList.contains('header__content_open');
+  if (!menuOpen) {
     // if menu is not open
     // extend overlay to device height
     header.classList.add('header_open');
@@ -55,17 +62,12 @@ function recolorScrolledMenu() {
   }
 }
 
-// toggle menuStatus on overlay click
-function toggleNavOnOverlay(e) {
-  if (e.target.classList.contains('header_open')) {
-    toggleNav();
-  }
-}
-
 hamburger.addEventListener('click', toggleNav);
 // TODO refactor this to update less often than every scroll
 window.addEventListener('scroll', recolorScrolledMenu);
 // TODO refactor this to update less often than every resize
 window.addEventListener('resize', recolorScrolledMenu);
 
+headerContainer.addEventListener('mouseover', toggleNav);
+headerContainer.addEventListener('mouseout', toggleNav);
 // HERO FUNCTIONALITY
