@@ -46,6 +46,9 @@
     background-color:#683D83 ;
 }
 .provider__text{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
     display: block;
     margin: 30px 20px;
 }
