@@ -42,6 +42,12 @@
   line-height: 16px;
   text-decoration: none;
   color: inherit;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.footer__column-link:hover {
+  opacity: 0.7;
 }
 
 @media (min-width: 768px) {
