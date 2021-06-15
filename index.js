@@ -68,6 +68,4 @@ window.addEventListener('scroll', recolorScrolledMenu);
 // TODO refactor this to update less often than every resize
 window.addEventListener('resize', recolorScrolledMenu);
 
-headerContainer.addEventListener('mouseover', toggleNav);
-headerContainer.addEventListener('mouseout', toggleNav);
 // HERO FUNCTIONALITY
