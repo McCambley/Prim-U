@@ -43,3 +43,36 @@
   text-decoration: none;
   color: inherit;
 }
+
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 40px;
+  }
+
+  .footer__column {
+    text-align: left;
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .footer__column_content_nav {
+    flex-basis: 48%;
+  }
+
+  .footer__column_content_contact {
+    flex-basis: 8%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    padding: 40px 60px;
+  }
+
+  .footer__column_content_nav {
+    flex-basis: 56%;
+  }
+}
