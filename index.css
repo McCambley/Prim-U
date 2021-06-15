@@ -6,6 +6,7 @@
 
 /* blocks */
 @import url(./blocks/page/page.css);
+@import url(./blocks/heading/heading.css);
+@import url(./blocks/treat-yourself/treat-yourself.css);
 @import url(./blocks/footer/footer.css);
-
 /* modifiers */
