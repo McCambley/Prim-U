@@ -8,21 +8,22 @@ padding: 0 10px;
     list-style: none;
     padding: 0;
 }
-.treat-yourself__card-container{
-    overflow: hidden;
-}
 .treat-yourself__card{
 position: relative;
+overflow: hidden;
 text-transform: uppercase;
-padding:43% 0;
 border-radius: 20px;
 background-position: center;
     background-size: cover;
     text-overflow: ellipsis;
-    
 }
-.treat-yourself__card-container:hover .treat-yourself__card{
-    transform: scale(1.2);
+.treat-yourself__card-image{
+width: 100%;
+height: 100%;
+transition: ease-in-out 1s all;
+}
+.treat-yourself__card:hover .treat-yourself__card-image{
+    transform: scale(1.5);
 }
 .treat-yourself__card-text{
     position: absolute;
@@ -36,6 +37,7 @@ font-family: 'Roboto Condensed';
     font-weight: 700;
     background-color: rgba(0, 0, 0, .5);
     border-radius: 20px;
+    transition: ease-in-out 1s background-color;
 
 }
 .treat-yourself__card-text:hover{
@@ -47,26 +49,6 @@ font-family: 'Roboto Condensed';
    
 }
 
-.treat-yourself__card_type_massage{
-    background-image: url('../../images/massage.png');
-
-}
-
-.treat-yourself__card_type_waxing{
-    background-image: url('../../images/waxing.png');
-}
-.treat-yourself__card_type_make-up{
-    background-image: url('../../images/makeUp.png');
-}
-.treat-yourself__card_type_manicure{
-    background-image: url('../../images/manicure.png');
-}
-.treat-yourself__card_type_hair{
-    background-image: url('../../images/hair.png');
-}
-.treat-yourself__card_type_male-grooming{
-    background-image: url('../../images/maleGrooming.png');
-}
 .treat-yourself__card_type_male-grooming .treat-yourself__text {
     line-height: 44px;
 }
