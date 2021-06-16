@@ -1,10 +1,74 @@
 .hero {
   background-color: #000;
+}
+
+.hero__buffer {
+  background-color: #000;
+  min-height: 115px;
+}
+
+.hero__content {
   background-image: url('../../images/heading_mobile.png');
-  background-position: 68% bottom;
+  background-position: 56% top;
   background-repeat: no-repeat;
   /* background is off because I (jake) didn't make the header a block item, it just sits overtop the background.
   I can fix but I think the black bar across the top looks bad anyways */
-  background-size: cover;
-  min-height: 700px;
+  background-size: 325%;
+  min-height: 685px;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  padding: 116px 20px 0;
+}
+
+.hero__heading {
+  color: #fff;
+  font-family: 'Roboto Condensed';
+  width: 100%;
+  max-width: 460px;
+  text-align: center;
+  font-size: 34px;
+  line-height: 40px;
+  margin: 0;
+}
+
+@media (min-width: 480px) {
+  .hero__buffer {
+    display: none;
+  }
+
+  .hero__content {
+    background-size: 250%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+  }
+
+  .hero__heading {
+    text-align: left;
+    margin-bottom: 300px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: 630px) {
+  .hero__heading {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__content {
+    background-image: url('../../images/heading.png');
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero__content {
+    max-width: 1740px;
+    padding: 60px;
+    margin: auto;
+  }
 }
