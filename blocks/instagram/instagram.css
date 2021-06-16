@@ -28,6 +28,12 @@
   margin-bottom: 30px;
 }
 
+.instagram__button-wrapper {
+  width: 100%;
+  max-width: 400px;
+  align-self: center;
+}
+
 /* no hover or active styles on button */
 .instagram__button {
   width: 100%;
@@ -44,8 +50,6 @@
   cursor: pointer;
   box-sizing: border-box;
   transition: color 0.15s ease, background-color 0.15s ease;
-  max-width: 400px;
-  align-self: center;
 }
 
 @media (min-width: 768px) {
@@ -69,7 +73,7 @@
     font-size: 20px;
   }
 
-  .instagram__button {
+  .instagram__button-wrapper {
     align-self: flex-start;
   }
 }
