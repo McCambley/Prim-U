@@ -1,0 +1,10 @@
+.hero {
+  background-color: #000;
+  background-image: url('../../images/heading_mobile.png');
+  background-position: 68% bottom;
+  background-repeat: no-repeat;
+  /* background is off because I (jake) didn't make the header a block item, it just sits overtop the background.
+  I can fix but I think the black bar across the top looks bad anyways */
+  background-size: cover;
+  min-height: 700px;
+}
