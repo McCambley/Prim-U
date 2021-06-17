@@ -7,6 +7,7 @@
 /* blocks */
 @import url(./blocks/page/page.css);
 @import url(./blocks/heading/heading.css);
+@import url(./blocks/customers/customers.css);
 @import url(./blocks/treat-yourself/treat-yourself.css);
 @import url(./blocks/hero/hero.css);
 @import url(./blocks/instagram/instagram.css);
