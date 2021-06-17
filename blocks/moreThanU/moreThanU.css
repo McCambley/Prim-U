@@ -1,49 +1,69 @@
-.customers{
+.moreThanU{
     margin-top: 20px;
     margin-bottom: 60px;
     padding:0 10px;
 }
-.customers__image{
+.moreThanU__items{
+    list-style: none;
+    padding: 0;
+}
+.moreThanU__card{
+    margin: 20px 0;
+}
+.moreThanU__image{
     position: relative;
-    background-image: url('../../images/forCustomers_mobile.png');
     background-repeat: no-repeat;
     background-size: cover;
-    min-height:643px ;
+    min-height:460px ;
     border-radius: 20px;
 }
-.customers__content{
+.moreThanU__image_type_wedding{
+    background-image: url(../../images/weddings_mobile.png);
+}
+
+.moreThanU__image_type_group{
+    background-image: url(../../images/groupBook_mobile.png);
+}
+
+.moreThanU__image_type_corporate{
+    background-image: url(../../images/corporate_mobile.png);
+}
+.moreThanU__content{
     position: absolute;
     inset: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
     background-color: rgba(0, 0, 0, .5);
     height: 100%;
     border-radius: 20px;
     
 }
-.customers__heading{
+.moreThanU__heading{
     color: #fff;
     font-size: 34px;
     font-weight: 700;
     padding: 36px 16px;
+    margin: 0;
 }
-.customers__sub-content{
+.moreThanU__sub-content{
     display: flex;
     flex-direction: column;
+    padding-bottom: 20px;
     align-items: flex-start;
-    
 }
-.customers__text{
+.moreThanU__text{
     color: #fff;
     font-family: 'Roboto' Arial, Helvetica, sans-serif;
     font-weight: 400;
+    line-height: 20px;
     font-size: 18px;
-    margin: 20px 16px;
+    margin: 0 30px;
     max-width: 584px;
 
 }
-.customers__button{
+.moreThanU__button{
     display: block;
     color: #683D83;
     font-size: 24px;
@@ -51,49 +71,63 @@
     font-weight: 700;
     line-height: 28px;
     text-transform: uppercase;
-    margin: 20px 16px;
+    margin: 16px 20px 20px;
     padding: 16px 69px;
     background-color: #fff;
     border-radius: 10px;
     transition: ease-in-out .5s all;
     border: none;
 }
-.customers__button:hover{
+.moreThanU__button:hover{
     background-color: #683D83;
     color: #fff;
 }
 @media screen and (min-width: 680px) {
-    .customers{
+    .moreThanU{
         margin-top: 60px;
         margin-bottom: 100px;
         padding:0 40px;
     }
-.customers__image{
-    background-image: url(../../images/forCustomers.png);
+    .moreThanU__card{
+        margin: 60px 0;
+    }
+    .moreThanU__image{
     background-position: center;
+        min-height: 460px;
+    
 }
-.customers__heading{
-    margin: 60px;
+    .moreThanU__image_type_wedding{
+    background-image: url(../../images/wedding.png);
 }
-.customers__sub-content{
+    .moreThanU__image_type_group{
+    background-image: url(../../images/groupBook.png);
+}
+    .moreThanU__image_type_corporate{
+    background-image: url(../../images/corporate.png);
+}
+    .moreThanU__heading{
+    padding: 40px 60px;
+    margin: 0;
+}
+    .moreThanU__sub-content{
     margin: 100px 60px 60px;
+    
 
 }
 
-
-  }
+}
   
   @media screen and (min-width: 1100px) {
-      .customers{
+      .moreThanU{
           padding: 0 60px;
       }
-    .customers__sub-content{
+    .moreThanU__sub-content{
         margin-top: 200px;
         flex-direction: row;
         align-items: flex-end;
         justify-content: space-between;
     }
-    .customers__button{
+    .moreThanU__button{
         margin: 0 60px;
     }
   }
