@@ -4,6 +4,8 @@
     text-transform: uppercase;
     font-size: 34px;
     line-height: 40px;
+    margin: 0;
+    margin-bottom: 40px;
 }
 .heading_span{
     color: #683d83;

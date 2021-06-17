@@ -1,6 +1,9 @@
 .providers{
     padding: 0 10px;
 }
+.providers__heading{
+    margin: 40px 10px;
+}
 .provider__card{
     width: 100%;
     
@@ -31,16 +34,24 @@
 }
 .provider__card-heading{
     color: #fff;
-    text-align: center;    
+    text-align: center;
+    font-size: 34px;
+    padding: 5px;
+    margin: 30px 0;
 }
 .provider__card-button{
     color: #683D83;
     font-size: 24px;
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
     margin: 0;
     padding: 16px 50px;
     background-color: #fff;
     border-radius: 10px;
     transition: ease-in-out .5s all;
+    border: none;
 }
 .provider__card-button:hover{
     color: #fff;
@@ -49,19 +60,27 @@
 .provider__text{
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 20px;
+    line-height: 28px;
     font-weight: 400;
     display: block;
     margin: 30px 20px;
 }
 @media screen and (min-width: 680px) {
     .providers{
-        padding: 0, 40px;
+        padding: 0 40px;
+    }
+    .providers__heading{
+        margin: 100px 0 60px;
     }
     .provider__card-area{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 46px;
-
+    
+    }
+    .provider__card-heading{
+        font-size: 38px;
+        margin: 40px 0;
     }
     .provider__text{
         margin: 40px 0;
@@ -70,7 +89,7 @@
 }
 @media screen and (min-width: 1000px) {
     .providers{
-        padding: 0, 60px;
+        padding: 0 60px;
     }
     .provider__card-area{
         gap: 60px;
