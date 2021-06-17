@@ -1,6 +1,10 @@
 .page {
   position: relative;
   font-family: 'Roboto Condensed';
+  scroll-behavior: smooth;
+  /* temporary for dev */
+  background-color: #fff;
+  min-height: 300vh;
 }
 
 /* breakpoints to check design */
