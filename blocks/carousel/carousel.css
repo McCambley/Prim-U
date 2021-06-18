@@ -1,0 +1,73 @@
+
+
+*  {
+    border: 1px solid red;
+}
+::-webkit-scrollbar{
+    border-style: solid;
+    height: 16px;
+    width: 16px;
+  }
+::-webkit-scrollbar:horizontal:decrement{
+    border-width: 7px 14px 7px 0;
+    border-color: transparent #404040 transparent transparent;
+  }
+::-webkit-scrollbar:horizontal:increment{
+    border-color: transparent #505050 transparent transparent;
+  }
+
+.carousel {
+    /* div */
+ max-width: 370px;
+ margin: auto;
+ /* end dev */
+    padding: 60px 10px 80px;
+}
+
+.carousel__cards {
+overflow-x: scroll;
+overflow-y: hidden;
+display: flex;
+list-style: none;
+margin: 0;
+padding: 10px;
+
+margin-bottom: 16px
+}
+
+.carousel__card {
+min-width: 250px;
+min-height: 350px;
+border-radius: 20px;
+margin-right: 16px;
+background: #F2F2F2;
+margin-bottom: 60px;
+}
+
+.carousel__scroll-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel__scroll-bar {
+    width: 100%;
+    min-height: 1em;
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.carousel__scroll-position {
+    height: 5px;
+    width: 50%;
+    background: gray;
+    border: none;
+    border-radius: 50px;
+
+}
+
+.carousel__arrow {
+    width: 20px;
+    height: 20px;
+}
