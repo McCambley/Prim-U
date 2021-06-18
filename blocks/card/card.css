@@ -1,12 +1,20 @@
 .card{
     padding:20px 10px 60px;
+    max-width: 1700px;
 }
 .card__items{
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 .card__card{
-    padding: 20px 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+
+.card__card:last-child{
+    margin-bottom: 0;
 }
 .card__image{
     position: relative;
@@ -17,6 +25,7 @@
 }
 .card__image_type_customers{
     background-image: url(../../images/forCustomers_mobile.png);
+    height:643px;
 }
 .card__image_type_wedding{
     background-image: url(../../images/weddings_mobile.png);
@@ -42,6 +51,7 @@
     font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
     font-size: 34px;
     font-weight: 700;
+    text-transform: uppercase;
     padding: 36px 16px;
     margin: 0;
 }
@@ -78,11 +88,12 @@
     font-weight: 700;
     line-height: 28px;
     text-transform: uppercase;
-    padding: 16px 69px;
+    padding: 16px;
     background-color: #fff;
     border-radius: 10px;
     transition: ease-in-out .5s all;
     border: none;
+    width: 100%;
 }
 .card__button:hover{
     background-color: #683D83;
@@ -93,7 +104,10 @@
         padding:60px 40px 100px;
     }
     .card__card{
-        padding: 60px 0;
+        margin-bottom: 60px;
+    }
+    .card__card:last-of-type{
+        margin-bottom: 0;
     }
     .card__image{
     background-position: center;
@@ -124,6 +138,9 @@
     .card__text_type_first{
         padding-bottom: 32px;
     }
+    .card__button{
+        max-width:235px ;
+    }
 }
   
   @media screen and (min-width: 1200px) {
@@ -142,4 +159,9 @@
     padding-bottom: 32px;
 }
   }
+  @media screen and (min-width: 1700px) {
+    .card{
+        margin:auto;
+    }
+}
   
