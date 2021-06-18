@@ -6,11 +6,13 @@
 
 /* blocks */
 @import url(./blocks/page/page.css);
+@import url(./blocks/header/header.css);
+@import url(./blocks/hero/hero.css);
 @import url(./blocks/heading/heading.css);
-@import url(./blocks/customers/customers.css);
 @import url(./blocks/treat-yourself/treat-yourself.css);
 @import url(./blocks/hero/hero.css);
-@import url('./blocks/moreThanU/moreThanU.css');
 @import url(./blocks/instagram/instagram.css);
 @import url(./blocks/footer/footer.css);
+@import url(./blocks/divider/divider.css);
+@import url(./blocks/card/card.css);
 /* modifiers */

@@ -1,69 +1,76 @@
-.moreThanU{
-    margin-top: 20px;
-    margin-bottom: 60px;
-    padding:0 10px;
+.card{
+    padding:20px 10px 60px;
 }
-.moreThanU__items{
+.card__items{
     list-style: none;
     padding: 0;
 }
-.moreThanU__card{
-    margin: 20px 0;
+.card__card{
+    padding: 20px 0;
 }
-.moreThanU__image{
+.card__image{
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     min-height:460px ;
     border-radius: 20px;
 }
-.moreThanU__image_type_wedding{
+.card__image_type_customers{
+    background-image: url(../../images/forCustomers_mobile.png);
+}
+.card__image_type_wedding{
     background-image: url(../../images/weddings_mobile.png);
 }
-
-.moreThanU__image_type_group{
+.card__image_type_group{
     background-image: url(../../images/groupBook_mobile.png);
 }
-
-.moreThanU__image_type_corporate{
+.card__image_type_corporate{
     background-image: url(../../images/corporate_mobile.png);
 }
-.moreThanU__content{
+.card__content{
     position: absolute;
     inset: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
     background-color: rgba(0, 0, 0, .5);
     height: 100%;
     border-radius: 20px;
-    
 }
-.moreThanU__heading{
+.card__heading{
     color: #fff;
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
     font-size: 34px;
     font-weight: 700;
     padding: 36px 16px;
     margin: 0;
 }
-.moreThanU__sub-content{
+.card__sub-content{
     display: flex;
     flex-direction: column;
-    padding-bottom: 20px;
+    padding: 20px;
     align-items: flex-start;
+    justify-content: center;
 }
-.moreThanU__text{
+.card__paragraphs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card__text{
     color: #fff;
-    font-family: 'Roboto' Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-weight: 400;
     line-height: 20px;
-    font-size: 18px;
-    margin: 0 30px;
+    font-size: 16px;
     max-width: 584px;
-
+    margin: 0;
+    padding-bottom: 40px;
 }
-.moreThanU__button{
+.card__text_type_first{
+    padding-bottom: 20px;
+}
+.card__button{
     display: block;
     color: #683D83;
     font-size: 24px;
@@ -71,64 +78,68 @@
     font-weight: 700;
     line-height: 28px;
     text-transform: uppercase;
-    margin: 16px 20px 20px;
     padding: 16px 69px;
     background-color: #fff;
     border-radius: 10px;
     transition: ease-in-out .5s all;
     border: none;
 }
-.moreThanU__button:hover{
+.card__button:hover{
     background-color: #683D83;
     color: #fff;
 }
 @media screen and (min-width: 680px) {
-    .moreThanU{
-        margin-top: 60px;
-        margin-bottom: 100px;
-        padding:0 40px;
+    .card{
+        padding:60px 40px 100px;
     }
-    .moreThanU__card{
-        margin: 60px 0;
+    .card__card{
+        padding: 60px 0;
     }
-    .moreThanU__image{
+    .card__image{
     background-position: center;
         min-height: 460px;
     
 }
-    .moreThanU__image_type_wedding{
+    .card__image_type_customers{
+    background-image: url(../../images/forCustomers.png);
+}
+    .card__image_type_wedding{
     background-image: url(../../images/wedding.png);
 }
-    .moreThanU__image_type_group{
+    .card__image_type_group{
     background-image: url(../../images/groupBook.png);
 }
-    .moreThanU__image_type_corporate{
+    .card__image_type_corporate{
     background-image: url(../../images/corporate.png);
 }
-    .moreThanU__heading{
+    .card__heading{
+    font-size: 50px;
+    line-height: 58.6px;
     padding: 40px 60px;
     margin: 0;
 }
-    .moreThanU__sub-content{
-    margin: 100px 60px 60px;
-    
-
-}
-
+    .card__sub-content{
+    padding: 0 60px 60px;
+    }
+    .card__text_type_first{
+        padding-bottom: 32px;
+    }
 }
   
-  @media screen and (min-width: 1100px) {
-      .moreThanU{
-          padding: 0 60px;
+  @media screen and (min-width: 1200px) {
+      .card{
+          padding: 60px 60px;
       }
-    .moreThanU__sub-content{
-        margin-top: 200px;
+    .card__sub-content{
         flex-direction: row;
-        align-items: flex-end;
+        align-items: center;
         justify-content: space-between;
     }
-    .moreThanU__button{
-        margin: 0 60px;
-    }
+   .card__text{
+       padding: 0;
+   }
+   .card__text_type_first{
+    padding-bottom: 32px;
+}
   }
   
