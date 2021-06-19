@@ -1,87 +1,84 @@
-.treat-yourself{
-padding: 0 10px;
+.treat-yourself {
+  padding: 0 10px;
 }
-.treat-yourself__card-area{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    list-style: none;
-    padding: 0;
+.treat-yourself__card-area {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  list-style: none;
+  padding: 0;
 }
-.treat-yourself__card{
-position: relative;
-overflow: hidden;
-text-transform: uppercase;
-border-radius: 20px;
-background-position: center;
-    background-size: cover;
-    text-overflow: ellipsis;
+.treat-yourself__card {
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+  text-overflow: ellipsis;
 }
-.treat-yourself__card-image{
-width: 100%;
-height: 100%;
-transition: ease-in-out 1s all;
+.treat-yourself__card-image {
+  width: 100%;
+  height: 100%;
+  transition: ease-in-out 1s all;
 }
-.treat-yourself__card:hover .treat-yourself__card-image{
-    transform: scale(1.5);
+.treat-yourself__card:hover .treat-yourself__card-image {
+  transform: scale(1.5);
 }
-.treat-yourself__card-text{
-    position: absolute;
-    inset: 0;
-    display:flex;
-    justify-content: center;
-    align-content: center;
-    color: #ffff;
-    font-size: 30px;
-font-family: 'Roboto Condensed';
-    font-weight: 700;
-    background-color: rgba(0, 0, 0, .5);
-    border-radius: 20px;
-    transition: ease-in-out 1s background-color;
-
+.treat-yourself__card-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #ffff;
+  font-size: 30px;
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  transition: ease-in-out 1s background-color;
 }
-.treat-yourself__card-text:hover{
-    background-color: rgba(0, 0, 0, 0);
+.treat-yourself__card-text:hover {
+  background-color: rgba(0, 0, 0, 0);
 }
-.treat-yourself__text{
-    line-height: 25vw;
-    text-align: center;
-   
+.treat-yourself__text {
+  line-height: 25vw;
+  text-align: center;
 }
 
 .treat-yourself__card_type_male-grooming .treat-yourself__text {
-    line-height: 44px;
+  line-height: 44px;
 }
 
 @media screen and (min-width: 435px) {
-    .treat-yourself__card_type_male-grooming .treat-yourself__text {
-     padding: 20% 0;
-    }
+  .treat-yourself__card_type_male-grooming .treat-yourself__text {
+    padding: 20% 0;
+  }
 }
 @media screen and (min-width: 680px) {
-    .treat-yourself{
-        padding: 0, 40px;
-    }
-    .treat-yourself__card-area{
-        grid-template-columns: repeat(3, 1fr);
-        gap: 43px;
-    }
-    .treat-yourself__card-text{
-        font-size: 38px;
-    }
-    .treat-yourself__text{
-        line-height: 20vw;
-    }
-    .treat-yourself__card_type_male-grooming .treat-yourself__text {
-        padding: 15% 0;
-       }
-
+  .treat-yourself {
+    padding: 0, 40px;
+  }
+  .treat-yourself__card-area {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 43px;
+  }
+  .treat-yourself__card-text {
+    font-size: 38px;
+  }
+  .treat-yourself__text {
+    line-height: 20vw;
+  }
+  .treat-yourself__card_type_male-grooming .treat-yourself__text {
+    padding: 15% 0;
+  }
 }
 @media screen and (min-width: 1000px) {
-    .treat-yourself{
-        padding: 0, 60px;
-    }
-    .treat-yourself__card-area{
-        gap: 60x;
-    }
+  .treat-yourself {
+    padding: 0, 60px;
+  }
+  .treat-yourself__card-area {
+    gap: 60x;
+  }
 }
