@@ -13,6 +13,7 @@
     border-color: transparent #404040 transparent transparent;
   }
 ::-webkit-scrollbar:horizontal:increment{
+    border-width: 7px 14px 7px 0;
     border-color: transparent #505050 transparent transparent;
   }
 
