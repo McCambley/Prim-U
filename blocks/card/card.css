@@ -71,8 +71,8 @@
     color: #fff;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-weight: 400;
-    line-height: 20px;
-    font-size: 16px;
+    line-height: 24px;
+    font-size: 18px;
     max-width: 584px;
     margin: 0;
     padding-bottom: 40px;
@@ -93,6 +93,7 @@
     border-radius: 10px;
     transition: ease-in-out .5s all;
     border: none;
+    cursor: pointer;
     width: 100%;
 }
 .card__button:hover{
@@ -134,6 +135,11 @@
 }
     .card__sub-content{
     padding: 0 60px 60px;
+    
+    }
+    .card__text{
+    font-size: 20px;
+    line-height: 28px;
     }
     .card__text_type_first{
         padding-bottom: 32px;
@@ -149,7 +155,7 @@
       }
     .card__sub-content{
         flex-direction: row;
-        align-items: center;
+        align-items: flex-end;
         justify-content: space-between;
     }
    .card__text{
