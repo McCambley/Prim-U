@@ -103,7 +103,7 @@
 }
 @media screen and (min-width: 680px) {
   .card {
-    padding: 60px 40px 100px;
+    padding: 60px 40px 60px;
   }
   .card__card {
     margin-bottom: 60px;
