@@ -1,5 +1,8 @@
 .treat-yourself {
   padding: 0 10px;
+  max-width: 1880px;
+  margin: auto;
+  box-sizing: border-box;
 }
 .treat-yourself__card-area {
   display: grid;
@@ -53,12 +56,12 @@
 
 @media screen and (min-width: 435px) {
   .treat-yourself__card_type_male-grooming .treat-yourself__text {
-    padding: 20% 0;
+    padding: 0 0;
   }
 }
 @media screen and (min-width: 680px) {
   .treat-yourself {
-    padding: 0, 40px;
+    padding: 0 40px;
   }
   .treat-yourself__card-area {
     grid-template-columns: repeat(3, 1fr);
@@ -76,7 +79,7 @@
 }
 @media screen and (min-width: 1000px) {
   .treat-yourself {
-    padding: 0, 60px;
+    padding: 0 60px;
   }
   .treat-yourself__card-area {
     gap: 60x;
