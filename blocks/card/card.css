@@ -1,0 +1,173 @@
+.card{
+    padding:20px 10px 60px;
+    max-width: 1700px;
+}
+.card__items{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.card__card{
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+
+.card__card:last-child{
+    margin-bottom: 0;
+}
+.card__image{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:460px ;
+    border-radius: 20px;
+}
+.card__image_type_customers{
+    background-image: url(../../images/forCustomers_mobile.png);
+    height:643px;
+}
+.card__image_type_wedding{
+    background-image: url(../../images/weddings_mobile.png);
+}
+.card__image_type_group{
+    background-image: url(../../images/groupBook_mobile.png);
+}
+.card__image_type_corporate{
+    background-image: url(../../images/corporate_mobile.png);
+}
+.card__content{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, .5);
+    height: 100%;
+    border-radius: 20px;
+}
+.card__heading{
+    color: #fff;
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 36px 16px;
+    margin: 0;
+}
+.card__sub-content{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: flex-start;
+    justify-content: center;
+}
+.card__paragraphs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card__text{
+    color: #fff;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 18px;
+    max-width: 584px;
+    margin: 0;
+    padding-bottom: 40px;
+}
+.card__text_type_first{
+    padding-bottom: 20px;
+}
+.card__button{
+    display: block;
+    color: #683D83;
+    font-size: 24px;
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: ease-in-out .5s all;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.card__button:hover{
+    background-color: #683D83;
+    color: #fff;
+}
+@media screen and (min-width: 680px) {
+    .card{
+        padding:60px 40px 100px;
+    }
+    .card__card{
+        margin-bottom: 60px;
+    }
+    .card__card:last-of-type{
+        margin-bottom: 0;
+    }
+    .card__image{
+    background-position: center;
+        min-height: 460px;
+    
+}
+    .card__image_type_customers{
+    background-image: url(../../images/forCustomers.png);
+}
+    .card__image_type_wedding{
+    background-image: url(../../images/wedding.png);
+}
+    .card__image_type_group{
+    background-image: url(../../images/groupBook.png);
+}
+    .card__image_type_corporate{
+    background-image: url(../../images/corporate.png);
+}
+    .card__heading{
+    font-size: 50px;
+    line-height: 58.6px;
+    padding: 40px 60px;
+    margin: 0;
+}
+    .card__sub-content{
+    padding: 0 60px 60px;
+    
+    }
+    .card__text{
+    font-size: 20px;
+    line-height: 28px;
+    }
+    .card__text_type_first{
+        padding-bottom: 32px;
+    }
+    .card__button{
+        max-width:235px ;
+    }
+}
+  
+  @media screen and (min-width: 1200px) {
+      .card{
+          padding: 60px 60px;
+      }
+    .card__sub-content{
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+   .card__text{
+       padding: 0;
+   }
+   .card__text_type_first{
+    padding-bottom: 32px;
+}
+  }
+  @media screen and (min-width: 1700px) {
+    .card{
+        margin:auto;
+    }
+}
+  
