@@ -24,6 +24,7 @@
 }
 
 .app-for-u__paragraph {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     margin: 0;
     font-style: normal;
     font-weight: normal;
@@ -64,11 +65,20 @@
 
 @media (min-width: 768px) {
     .app-for-u {
-        padding: 100px 43px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: 80px 42px;
     }
+
+    .app-for-u__text-container {
+        max-width: 605px;
+        padding-right: 42px;
+        box-sizing: border-box;
+    }
+
     .app-for-u__title {
         margin-bottom: 32px;
-        max-width: 100%;
+        max-width: 335px;
     }
     .app-for-u__paragraph:not(:last-child) {
         margin-bottom: 32px;
@@ -79,11 +89,19 @@
     .app-for-u {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        padding: 80px 0 90.87px 42px;
+        padding: 80px 44.43px 90.87px 42px;
     }
+
     .app-for-u__text-container {
         max-width: 605px;
+        padding-right: 42px;
+        box-sizing: border-box;
     }
+
+    .app-for-u__title {
+        max-width: 100%;
+    }
+
     .app-for-u__image {
         margin-bottom: 0;
     }
@@ -93,12 +111,17 @@
     .app-for-u {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        padding: 80px 0 80.48px 0;
+        padding: 80px 60px 80.48px;
     }
+
     .app-for-u__text-container {
         max-width: 630px;
-        margin: 20px 0 0 60px;
+        margin: 20px 0 0;
+        max-width: 605px;
+        padding-right: 42px;
+        box-sizing: border-box;
     }
+    
     .app-for-u__image {
         max-width: 300px;
         margin-bottom: 0;
