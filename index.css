@@ -17,3 +17,5 @@
 @import url(./blocks/card/card.css);
 @import url(./blocks/providers/providers.css);
 /* modifiers */
+
+@import url(./blocks/app-for-u/app-for-u.css);
