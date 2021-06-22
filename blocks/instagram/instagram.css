@@ -6,6 +6,7 @@
   max-width: 500px;
   align-items: center;
   margin: auto;
+  box-sizing: border-box;
 }
 
 .instagram__image {

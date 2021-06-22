@@ -14,4 +14,8 @@
 @import url(./blocks/instagram/instagram.css);
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/divider/divider.css);
+@import url(./blocks/card/card.css);
+@import url(./blocks/providers/providers.css);
 /* modifiers */
+
+@import url(./blocks/app-for-u/app-for-u.css);

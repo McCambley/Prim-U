@@ -1,5 +1,8 @@
 .treat-yourself {
-  padding: 0 10px;
+  padding: 0 10px 60px;
+  max-width: 1880px;
+  margin: auto;
+  box-sizing: border-box;
 }
 .treat-yourself__card-area {
   display: grid;
@@ -7,43 +10,43 @@
   gap: 10px;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 .treat-yourself__card {
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
   border-radius: 20px;
-  background-position: center;
-  background-size: cover;
   text-overflow: ellipsis;
 }
 .treat-yourself__card-image {
   width: 100%;
   height: 100%;
-  transition: ease-in-out 1s all;
+  transition: all 0.3s ease;
 }
 .treat-yourself__card:hover .treat-yourself__card-image {
-  transform: scale(1.5);
+  transform: scale(1.05);
 }
-.treat-yourself__card-text {
+.treat-yourself__text-container {
   position: absolute;
   inset: 0;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   color: #ffff;
-  font-size: 30px;
-  font-family: 'Roboto Condensed';
-  font-weight: 700;
-  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  transition: ease-in-out 1s background-color;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
 }
-.treat-yourself__card-text:hover {
+.treat-yourself__text-container:hover {
   background-color: rgba(0, 0, 0, 0);
 }
 .treat-yourself__text {
-  line-height: 25vw;
+  font-size: 30px;
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  line-height: 36px;
+  margin: 0;
   text-align: center;
 }
 
@@ -53,32 +56,28 @@
 
 @media screen and (min-width: 435px) {
   .treat-yourself__card_type_male-grooming .treat-yourself__text {
-    padding: 20% 0;
+    padding: 0 0;
   }
 }
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 768px) {
   .treat-yourself {
-    padding: 0, 40px;
+    padding: 0 40px 100px;
   }
   .treat-yourself__card-area {
     grid-template-columns: repeat(3, 1fr);
-    gap: 43px;
+    gap: 40px;
   }
-  .treat-yourself__card-text {
-    font-size: 38px;
-  }
+
   .treat-yourself__text {
-    line-height: 20vw;
-  }
-  .treat-yourself__card_type_male-grooming .treat-yourself__text {
-    padding: 15% 0;
+    font-size: 38px;
+    line-height: 44px;
   }
 }
 @media screen and (min-width: 1000px) {
   .treat-yourself {
-    padding: 0, 60px;
+    padding: 0 60px 100px;
   }
   .treat-yourself__card-area {
-    gap: 60x;
+    gap: 60px;
   }
 }
