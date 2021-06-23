@@ -7,6 +7,7 @@ const logo = document.querySelector('.header__logo');
 const logoAccent = document.querySelector('.header__logo-accent');
 const headerLinks = Array.from(document.querySelectorAll('.header__link'));
 const hero = document.querySelector('.hero');
+const primlancerVideoButton = document.querySelector('.primlancers__video-button')
 
 // toggle menuStatus on overlay click
 function toggleNavOnOverlay(e) {
@@ -61,6 +62,16 @@ function recolorScrolledMenu() {
     });
   }
 }
+
+//Hide play button and overlay on video and start playing video
+function playVideo(event) {
+  const videoContainer = event.target.closest('.primlancers__video-container')
+  videoContainer.querySelector('.overlay').classList.add('video_active')
+  videoContainer.querySelector('.primlancers__video-button').classList.add('video_active')
+  videoContainer.querySelector('.primlancers__video').src += "?autoplay=1"
+}
+
+primlancerVideoButton.addEventListener('click', playVideo)
 
 hamburger.addEventListener('click', toggleNav);
 // TODO refactor this to update less often than every scroll
