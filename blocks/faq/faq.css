@@ -3,19 +3,11 @@
   max-width: 1880px;
   margin: auto;
 }
-/* .faq * {
-  border: 1px solid pink;
-} */
-
-/* .faq_show {
-  max-height: 1000px; 
-} */
 
 .faq__section {
   margin-bottom: 80px;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid red; */
 }
 
 .faq__section:last-child {
@@ -37,35 +29,14 @@
   line-height: 28px;
 }
 .faq__question-group {
-  /* border: 1px solid blue; */
   margin: 0;
   transition: max-height 1s ease, opacity 1.5s ease;
 }
-/* OLD FUNCTIONALITY MODIFYING WHOLE GROUPS
-.faq__question-group_priority_primary {
-  max-height: 1000px;
-  overflow: hidden;
-  opacity: 1;
-}
-
-.faq__question-group_priority_secondary {
-  max-height: 0px;
-  overflow: hidden;
-  opacity: 0;
-}
-
-.faq__question-group_priority_tertiary {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-} OLD FUNCTIONALITY MODIFYING WHOLE GROUPS */
 
 .faq__question-group_show {
   max-height: 1000px;
   opacity: 1;
 }
-
-/* NEW FUNCTIONALITY HERE */
 
 .faq__question-container {
   display: flex;
@@ -76,7 +47,6 @@
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  /* transition: max-height 5s ease, opacity 0.3s ease, margin-bottom 1s ease; */
   transition: margin-bottom 0.3s ease-in-out 0.05s, max-height 0.2s ease-in-out 0.05s, opacity 0.1s ease-in-out;
 }
 
@@ -85,13 +55,15 @@
   max-height: 500px;
   opacity: 1;
 }
+
 .faq__question-container_group_secondary {
   margin-bottom: 0;
   max-height: 0;
   opacity: 0;
 }
+
 .faq__question-container_group_tertiary {
-  /* PLACEHOLDER */
+  /* PLACEHOLDER FOR READABILITY*/
   border: none;
 }
 
@@ -100,9 +72,7 @@
   max-height: 500px;
   opacity: 1;
   transition: margin-bottom 0.1s ease-in-out, max-height 0.1s ease-in-out, opacity 0.1s ease-in-out 0.05s;
-  /* transition: all 0.1s ease-in-out; */
 }
-/* NEW FUNCTIONALITY ABOVE */
 
 .faq__question-subcontainer {
   display: flex;
@@ -132,15 +102,13 @@
   transition: max-height 0.3s ease;
 }
 
-/* open question modifiers */
-
 .faq__question-subcontainer_open {
   margin-bottom: 20px;
   transition: all 0.3s ease;
 }
 
 .faq__answer_open {
-  /* might need to be higher */
+  /* might need to be larger */
   max-height: 300px;
 }
 
@@ -177,6 +145,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 42px;
+    /* the below arrangement is not defined on the brief and is subject to change */
     grid-template-areas:
       'a b'
       'c c';

@@ -1,4 +1,6 @@
+// ---
 // HEADER FUNCTIONALITY
+// ---
 
 const header = document.querySelector('.header');
 const hamburger = document.querySelector('.header__hamburger');
@@ -68,7 +70,9 @@ window.addEventListener('scroll', recolorScrolledMenu);
 // TODO refactor this to update less often than every resize
 window.addEventListener('resize', recolorScrolledMenu);
 
+// ---
 // BEGIN FAQ FUNCTIONALITY
+// ---
 
 const questionArray = Array.from(document.querySelectorAll('.faq__question-container'));
 const showMoreButtonArray = Array.from(document.querySelectorAll('.faq__show-button'));
@@ -110,20 +114,28 @@ function setShowMoreListener() {
     button.addEventListener('click', () => {
       closed = !closed;
       if (window.innerWidth >= 1024) {
+        // open only the third section of questions when the screen is larger than or equal to 1024px
+        // begin iterating over each element in the section
         tertiaryQuestionArray.forEach((question, index, array) => {
+          // timeout opens displays each question in the section in sequence
           setTimeout(() => {
             if (closed) {
+              // open question
               question.classList.add('faq__question-container_show');
               button.textContent = 'show less';
               rev = array.length;
             } else {
+              // hide question
               question.classList.remove('faq__question-container_show');
               button.textContent = 'show more';
               rev = 0;
             }
+            // this equation is used to reverse the sequence in which elements are
+            // hidden depending on whether the button is "showing more" or "showing less"
           }, Math.abs((rev - index) * interval));
         });
       } else {
+        // open the second and third sections of questions when the screen is  not larger than or equal to 1024px
         extendedSecondaryQuestionArray.forEach((question, index, array) => {
           setTimeout(() => {
             if (closed) {
@@ -151,4 +163,6 @@ function setFaqEventListeners() {
 
 setFaqEventListeners();
 
+// ---
 // END FAQ FUNCTIONALITY
+// ---
