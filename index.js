@@ -86,14 +86,11 @@ function setQuestionListeners() {
 
     question.addEventListener('click', () => {
       const questionOpen = question.classList.contains('faq__question-subcontainer_open');
-      console.log(questionOpen);
       if (!questionOpen) {
-        console.log('opening');
         question.classList.add('faq__question-subcontainer_open');
         answer.classList.add('faq__answer_open');
         toggle.src = './images/faq-close.png';
       } else {
-        console.log('closing');
         question.classList.remove('faq__question-subcontainer_open');
         answer.classList.remove('faq__answer_open');
         toggle.src = './images/faq-open.png';
