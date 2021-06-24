@@ -166,11 +166,13 @@
   color: #fff;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .faq {
     padding: 80px 40px;
   }
+}
 
+@media (min-width: 1024px) {
   .faq__subsection {
     display: grid;
     grid-template-columns: 1fr 1fr;
