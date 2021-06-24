@@ -2,20 +2,24 @@
 
 *  {
     border: 1px solid red;
+    
 }
-::-webkit-scrollbar{
-    border-style: solid;
+
+
+.carousel__cards::-webkit-scrollbar{
+    background:transparent;
     height: 16px;
-    width: 16px;
+    width: 10px;
   }
-::-webkit-scrollbar:horizontal:decrement{
+.carousel__cards::-webkit-scrollbar:horizontal:decrement{
     border-width: 7px 14px 7px 0;
-    border-color: transparent #404040 transparent transparent;
+
   }
-::-webkit-scrollbar:horizontal:increment{
+.carousel__cards::-webkit-scrollbar:horizontal:increment{
     border-width: 7px 14px 7px 0;
-    border-color: transparent #505050 transparent transparent;
+ 
   }
+
 
 .carousel {
     /* div */
@@ -49,7 +53,7 @@ margin-bottom: 60px;
     display: flex;
     justify-content: space-between;
 }
-
+/*
 .carousel__scroll-bar {
     width: 100%;
     min-height: 1em;
@@ -71,4 +75,4 @@ margin-bottom: 60px;
 .carousel__arrow {
     width: 20px;
     height: 20px;
-}
+}*/

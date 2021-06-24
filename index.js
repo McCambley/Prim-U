@@ -72,11 +72,11 @@
 
 // CAROUSEL BELOW
 
-const carousel = document.querySelector('.carousel__wrapper')
+const carousel = document.querySelector('.carousel__cards')
 const cards = Array.from(document.querySelectorAll('.carousel__card'));
 
 function showScroll() {
-  console.log(carousel, carousel.scrollLeft, carousel.scrollWidth)
+  console.log("object:", carousel,"scroll left:", carousel.scrollLeft, "max:", carousel.scrollWidth - carousel.clientWidth)
 }
 
 cards.forEach(card => {
@@ -91,7 +91,7 @@ carousel.addEventListener('scroll', showScroll)
 
 
 //copying styles from codepen to try
-const slider = document.querySelector('.carousel__cards');
+const slider = carousel;
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -116,5 +116,4 @@ slider.addEventListener('mousemove', (e) => {
   const x = e.pageX - slider.offsetLeft;
   const walk = (x - startX) * 3; //scroll-fast
   slider.scrollLeft = scrollLeft - walk;
-  console.log(walk);
 });
