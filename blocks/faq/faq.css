@@ -77,7 +77,7 @@
   opacity: 0;
   overflow: hidden;
   /* transition: max-height 5s ease, opacity 0.3s ease, margin-bottom 1s ease; */
-  transition: all 0.1s ease-in-out;
+  transition: margin-bottom 0.3s ease-in-out 0.05s, max-height 0.2s ease-in-out 0.05s, opacity 0.1s ease-in-out;
 }
 
 .faq__question-container_group_primary {
@@ -99,6 +99,8 @@
   margin-bottom: 40px;
   max-height: 500px;
   opacity: 1;
+  transition: margin-bottom 0.1s ease-in-out, max-height 0.1s ease-in-out, opacity 0.1s ease-in-out 0.05s;
+  /* transition: all 0.1s ease-in-out; */
 }
 /* NEW FUNCTIONALITY ABOVE */
 

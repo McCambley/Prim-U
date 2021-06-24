@@ -1,7 +1,10 @@
+:root {
+  scroll-behavior: smooth;
+}
+
 .page {
   position: relative;
   font-family: 'Roboto Condensed';
-  scroll-behavior: smooth;
 }
 
 /* breakpoints to check design */
