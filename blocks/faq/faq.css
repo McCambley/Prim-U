@@ -41,39 +41,67 @@
   margin: 0;
   transition: max-height 1s ease, opacity 1.5s ease;
 }
-
+/* OLD FUNCTIONALITY MODIFYING WHOLE GROUPS
 .faq__question-group_priority_primary {
   max-height: 1000px;
   overflow: hidden;
   opacity: 1;
-  /* transition: max-height 1s ease; */
 }
 
 .faq__question-group_priority_secondary {
   max-height: 0px;
   overflow: hidden;
   opacity: 0;
-  /* transition: max-height 0.5s linear 0.6s; */
 }
 
 .faq__question-group_priority_tertiary {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  /* transition: max-height 0.5s linear 0.3s; */
-}
+} OLD FUNCTIONALITY MODIFYING WHOLE GROUPS */
 
 .faq__question-group_show {
   max-height: 1000px;
   opacity: 1;
 }
 
+/* NEW FUNCTIONALITY HERE */
+
 .faq__question-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 40px;
+  /* DEFAULT */
+  margin-bottom: 0px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  /* transition: max-height 5s ease, opacity 0.3s ease, margin-bottom 1s ease; */
+  transition: all 0.1s ease-in-out;
 }
+
+.faq__question-container_group_primary {
+  margin-bottom: 40px;
+  max-height: 500px;
+  opacity: 1;
+}
+.faq__question-container_group_secondary {
+  margin-bottom: 0;
+  max-height: 0;
+  opacity: 0;
+}
+.faq__question-container_group_tertiary {
+  /* PLACEHOLDER */
+  border: none;
+}
+
+.faq__question-container_show {
+  margin-bottom: 40px;
+  max-height: 500px;
+  opacity: 1;
+}
+/* NEW FUNCTIONALITY ABOVE */
+
 .faq__question-subcontainer {
   display: flex;
   justify-content: space-between;
@@ -145,10 +173,24 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 42px;
+    grid-template-areas:
+      'a b'
+      'c c';
   }
 
-  .faq__question-group_priority_secondary {
-    max-height: 1000px;
+  .faq__question-group:nth-child(1) {
+    grid-area: a;
+  }
+  .faq__question-group:nth-child(2) {
+    grid-area: b;
+  }
+  .faq__question-group:nth-child(3) {
+    grid-area: c;
+  }
+
+  .faq__question-container_group_secondary {
+    margin-bottom: 40px;
+    max-height: 500px;
     opacity: 1;
   }
 

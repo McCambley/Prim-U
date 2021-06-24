@@ -31,19 +31,41 @@ function setQuestionListeners() {
 // Show more button listeners
 function setShowMoreListener() {
   showMoreButtonArray.forEach(button => {
-    const questionGroupArray = button.parentElement.querySelectorAll('.faq__question-group');
+    const secondaryQuestionArray = Array.from(button.parentElement.querySelectorAll('.faq__question-container_group_secondary'));
+    const tertiaryQuestionArray = Array.from(button.parentElement.querySelectorAll('.faq__question-container_group_tertiary'));
+    const extendedSecondaryQuestionArray = [...secondaryQuestionArray, ...tertiaryQuestionArray];
+    let rev = 0;
     button.addEventListener('click', () => {
-      questionGroupArray.forEach(group => {
-        if (!group.classList.contains('faq__question-group_show')) {
-          group.classList.add('faq__question-group_show');
-          console.log('showing: ', group);
-          button.textContent = 'show less';
-        } else {
-          group.classList.remove('faq__question-group_show');
-          console.log('Hiding: ', group);
-          button.textContent = 'show more';
-        }
-      });
+      console.log(rev);
+      if (window.innerWidth >= 1024) {
+        tertiaryQuestionArray.forEach((question, index, array) => {
+          setTimeout(() => {
+            if (!question.classList.contains('faq__question-container_show')) {
+              question.classList.add('faq__question-container_show');
+              button.textContent = 'show less';
+              rev = array.length;
+            } else {
+              question.classList.remove('faq__question-container_show');
+              button.textContent = 'show more';
+              rev = 0;
+            }
+          }, Math.abs((rev - index) * 25));
+        });
+      } else {
+        extendedSecondaryQuestionArray.forEach((question, index, array) => {
+          setTimeout(() => {
+            if (!question.classList.contains('faq__question-container_show')) {
+              question.classList.add('faq__question-container_show');
+              button.textContent = 'show less';
+              rev = array.length;
+            } else {
+              question.classList.remove('faq__question-container_show');
+              button.textContent = 'show more';
+              rev = 0;
+            }
+          }, Math.abs((rev - index) * 25));
+        });
+      }
     });
   });
 }
