@@ -1,9 +1,5 @@
 
 
-.carousel *  {
-    border: 1px solid red;
-    
-}
 
 /* What do about scrollbar design?
 .carousel__cards::-webkit-scrollbar{
@@ -34,7 +30,6 @@ list-style: none;
 margin: 0;
 padding: 0;
 
-margin-bottom: 16px
 }
 
 .carousel__card {
@@ -110,3 +105,39 @@ Potential custom scrollbar?
     width: 20px;
     height: 20px;
 }*/
+@media screen and (min-width:750px) {
+    
+.carousel {
+    margin: auto;
+       padding: 60px 40px 80px;
+   }
+   
+   .carousel__cards {
+   margin-top: 40px;
+   }
+   
+   .carousel__card {
+   min-width: 400px;
+   min-height: 470px;
+   margin-right: 40px;
+   margin-bottom: 80px;
+   }
+   .carousel__card_type_review{
+       min-width: 520px;
+       min-height: 240px;
+   }
+  
+   .carousel__text{
+       padding: 0 20px 34px;
+   }
+   
+}
+
+@media screen and (min-width:1280px) {
+    
+    .carousel {
+        margin: auto;
+           padding: 60px 60px 80px;
+       }
+       
+    }
