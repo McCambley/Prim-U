@@ -67,6 +67,11 @@
   border: none;
 }
 
+.faq__question-container_group_quaternary {
+  /* PLACEHOLDER FOR READABILITY*/
+  border: none;
+}
+
 .faq__question-container_show {
   margin-bottom: 40px;
   max-height: 500px;
@@ -100,6 +105,8 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .faq__question-subcontainer_open {
@@ -144,21 +151,7 @@
   .faq__subsection {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 42px;
-    /* the below arrangement is not defined on the brief and is subject to change */
-    grid-template-areas:
-      'a b'
-      'c c';
-  }
-
-  .faq__question-group:nth-child(1) {
-    grid-area: a;
-  }
-  .faq__question-group:nth-child(2) {
-    grid-area: b;
-  }
-  .faq__question-group:nth-child(3) {
-    grid-area: c;
+    gap: 0 42px;
   }
 
   .faq__question-container_group_secondary {
@@ -178,6 +171,6 @@
     padding: 80px 60px;
   }
   .faq__subsection {
-    gap: 60px;
+    gap: 0, 60px;
   }
 }

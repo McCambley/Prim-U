@@ -99,13 +99,43 @@ function setQuestionListeners() {
   });
 }
 
+function toggleQuestionsArray(questionArray, button, closed, reverseFlag, interval) {
+  console.log('start: ', reverseFlag);
+  questionArray.forEach((question, index, array) => {
+    // timeout opens displays each question in the section in sequence
+    setTimeout(() => {
+      if (closed) {
+        // open question
+        question.classList.add('faq__question-container_show');
+        button.textContent = 'show less';
+      } else {
+        // hide question
+        question.classList.remove('faq__question-container_show');
+        button.textContent = 'show more';
+      }
+      // this equation is used to reverse the sequence in which elements are
+      // hidden depending on whether the button is "showing more" or "showing less"
+    }, Math.abs((reverseFlag - index) * interval));
+  });
+  console.log('end: ', reverseFlag);
+}
+
 // Show more button listeners
 function setShowMoreListener() {
   showMoreButtonArray.forEach(button => {
+    // question group arrays
     const secondaryQuestionArray = Array.from(button.parentElement.querySelectorAll('.faq__question-container_group_secondary'));
     const tertiaryQuestionArray = Array.from(button.parentElement.querySelectorAll('.faq__question-container_group_tertiary'));
-    const extendedSecondaryQuestionArray = [...secondaryQuestionArray, ...tertiaryQuestionArray];
-    let rev = 0;
+    const quaternaryQuestionArray = Array.from(button.parentElement.querySelectorAll('.faq__question-container_group_quaternary'));
+    // question group combination arrays
+    const threeGroupArray = [...secondaryQuestionArray, ...tertiaryQuestionArray, ...quaternaryQuestionArray];
+    // interleave last two question groups
+    const twoGroupArray = tertiaryQuestionArray
+      .map((value, index) => {
+        return [value, quaternaryQuestionArray[index]];
+      })
+      .flat()
+      .filter(question => question != null);
     let closed = false;
     let interval = 25;
     button.addEventListener('click', () => {
@@ -113,39 +143,14 @@ function setShowMoreListener() {
       if (window.innerWidth >= 1024) {
         // open only the third section of questions when the screen is larger than or equal to 1024px
         // begin iterating over each element in the section
-        tertiaryQuestionArray.forEach((question, index, array) => {
-          // timeout opens displays each question in the section in sequence
-          setTimeout(() => {
-            if (closed) {
-              // open question
-              question.classList.add('faq__question-container_show');
-              button.textContent = 'show less';
-              rev = array.length;
-            } else {
-              // hide question
-              question.classList.remove('faq__question-container_show');
-              button.textContent = 'show more';
-              rev = 0;
-            }
-            // this equation is used to reverse the sequence in which elements are
-            // hidden depending on whether the button is "showing more" or "showing less"
-          }, Math.abs((rev - index) * interval));
-        });
+        let reverseFlag = closed ? 0 : twoGroupArray.length;
+        toggleQuestionsArray(twoGroupArray, button, closed, reverseFlag, interval);
+        console.log(twoGroupArray);
+        // toggleQuestionsArray(quaternaryQuestionArray, button, closed, reverseFlag, interval);
       } else {
         // open the second and third sections of questions when the screen is  not larger than or equal to 1024px
-        extendedSecondaryQuestionArray.forEach((question, index, array) => {
-          setTimeout(() => {
-            if (closed) {
-              question.classList.add('faq__question-container_show');
-              button.textContent = 'show less';
-              rev = array.length;
-            } else {
-              question.classList.remove('faq__question-container_show');
-              button.textContent = 'show more';
-              rev = 0;
-            }
-          }, Math.abs((rev - index) * interval));
-        });
+        let reverseFlag = closed ? 0 : threeGroupArray.length;
+        toggleQuestionsArray(threeGroupArray, button, closed, reverseFlag, interval);
       }
     });
   });
@@ -163,3 +168,36 @@ setFaqEventListeners();
 // ---
 // END FAQ FUNCTIONALITY
 // ---
+
+// tertiaryQuestionArray.forEach((question, index, array) => {
+//   // timeout opens displays each question in the section in sequence
+//   setTimeout(() => {
+//     if (closed) {
+//       // open question
+//       question.classList.add('faq__question-container_show');
+//       button.textContent = 'show less';
+//       reverseFlag = array.length;
+//     } else {
+//       // hide question
+//       question.classList.remove('faq__question-container_show');
+//       button.textContent = 'show more';
+//       reverseFlag = 0;
+//     }
+//     // this equation is used to reverse the sequence in which elements are
+//     // hidden depending on whether the button is "showing more" or "showing less"
+//   }, Math.abs((reverseFlag - index) * interval));
+// });
+
+// extendedSecondaryQuestionArray.forEach((question, index, array) => {
+//   setTimeout(() => {
+//     if (closed) {
+//       question.classList.add('faq__question-container_show');
+//       button.textContent = 'show less';
+//       reverseFlag = array.length;
+//     } else {
+//       question.classList.remove('faq__question-container_show');
+//       button.textContent = 'show more';
+//       reverseFlag = 0;
+//     }
+//   }, Math.abs((reverseFlag - index) * interval));
+// });
