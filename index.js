@@ -69,3 +69,76 @@ window.addEventListener('scroll', recolorScrolledMenu);
 window.addEventListener('resize', recolorScrolledMenu);
 
 // HERO FUNCTIONALITY
+
+// ---
+// Carousels Reviews && Products
+// ---
+
+const carousels = document.querySelectorAll('.carousel');
+
+carousels.forEach(carousel => {
+  const carouselCards = carousel.querySelector('.carousel__cards');
+  const carouselCard = carousel.querySelector('.carousel__card');
+  const leftArrow = carousel.querySelector('.carousel__scroll-arrow_left');
+  const rightArrow = carousel.querySelector('.carousel__scroll-arrow_right');
+  const scrollBar = carousel.querySelector('.carousel__scroll-bar');
+  const scrollProgress = carousel.querySelector('.carousel__scroll-progress');
+
+  function setProgressSize() {
+    scrollProgress.style.width = `${(carouselCards.offsetWidth / carouselCards.scrollWidth) * 100}%`;
+  }
+
+  function scrollLeft() {
+    carouselCards.scrollLeft -= carouselCard.offsetWidth;
+  }
+
+  function scrollRight() {
+    carouselCards.scrollLeft += carouselCard.offsetWidth;
+  }
+
+  carouselCards.addEventListener('scroll', () => {
+    let scrolledDistance = carouselCards.scrollLeft;
+    let scrollableWidth = carouselCards.scrollWidth - carouselCards.offsetWidth;
+    let barWidth = scrollBar.offsetWidth;
+    let progressWidth = scrollProgress.offsetWidth;
+    let scrolledPercentage = scrolledDistance / scrollableWidth;
+    let buffer = (barWidth - progressWidth) * scrolledPercentage; // + scrolledPercentage * carouselCards.offsetWidth; //(carouselCards.offsetWidth / carouselCards.scrollWidth) * 100;
+    scrollProgress.style.marginLeft = `${buffer}px`;
+    console.log(`${buffer}px`, scrolledPercentage);
+  });
+
+  leftArrow.addEventListener('click', scrollLeft);
+  rightArrow.addEventListener('click', scrollRight);
+
+  window.addEventListener('scroll', setProgressSize);
+  window.addEventListener('resize', setProgressSize);
+});
+
+// ---
+// END Carousels
+
+//Click to scroll on carousels
+const sliders = document.querySelectorAll('.carousel__cards');
+let isDown = false;
+let startX;
+let scrollLeft;
+sliders.forEach(slider => {
+  slider.addEventListener('mousedown', e => {
+    isDown = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+  });
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+  });
+  slider.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
+  });
+});
