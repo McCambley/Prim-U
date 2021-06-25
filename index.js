@@ -71,41 +71,74 @@ window.addEventListener('resize', recolorScrolledMenu);
 // HERO FUNCTIONALITY
 
 // ---
-// REVIEWS
+// Carousels Reviews && Products
 // ---
 
-const carouselCards = document.querySelector('.carousel__cards');
-const carouselCard = document.querySelector('.carousel__card');
-const leftArrow = document.querySelector('.carousel__scroll-arrow_left');
-const rightArrow = document.querySelector('.carousel__scroll-arrow_right');
-const scrollBar = document.querySelector('.carousel__scroll-bar');
-const scrollProgress = document.querySelector('.carousel__scroll-progress');
+const carousels = document.querySelectorAll('.carousel');
 
-function setProgressSize() {
-  scrollProgress.style.width = `${(carouselCards.offsetWidth / carouselCards.scrollWidth) * 100}%`;
-}
+carousels.forEach(carousel => {
+  const carouselCards = carousel.querySelector('.carousel__cards');
+  const carouselCard = carousel.querySelector('.carousel__card');
+  const leftArrow = carousel.querySelector('.carousel__scroll-arrow_left');
+  const rightArrow = carousel.querySelector('.carousel__scroll-arrow_right');
+  const scrollBar = carousel.querySelector('.carousel__scroll-bar');
+  const scrollProgress = carousel.querySelector('.carousel__scroll-progress');
 
-function scrollLeft() {
-  carouselCards.scrollLeft -= carouselCard.offsetWidth;
-}
+  function setProgressSize() {
+    scrollProgress.style.width = `${(carouselCards.offsetWidth / carouselCards.scrollWidth) * 100}%`;
+  }
 
-function scrollRight() {
-  carouselCards.scrollLeft += carouselCard.offsetWidth;
-}
+  function scrollLeft() {
+    carouselCards.scrollLeft -= carouselCard.offsetWidth;
+  }
 
-carouselCards.addEventListener('scroll', () => {
-  let scrolledDistance = carouselCards.scrollLeft;
-  let scrollableWidth = carouselCards.scrollWidth - carouselCards.offsetWidth;
-  let barWidth = scrollBar.offsetWidth;
-  let progressWidth = scrollProgress.offsetWidth;
-  let scrolledPercentage = scrolledDistance / scrollableWidth;
-  let buffer = (barWidth - progressWidth) * scrolledPercentage; // + scrolledPercentage * carouselCards.offsetWidth; //(carouselCards.offsetWidth / carouselCards.scrollWidth) * 100;
-  scrollProgress.style.marginLeft = `${buffer}px`;
-  console.log(`${buffer}px`, scrolledPercentage);
+  function scrollRight() {
+    carouselCards.scrollLeft += carouselCard.offsetWidth;
+  }
+
+  carouselCards.addEventListener('scroll', () => {
+    let scrolledDistance = carouselCards.scrollLeft;
+    let scrollableWidth = carouselCards.scrollWidth - carouselCards.offsetWidth;
+    let barWidth = scrollBar.offsetWidth;
+    let progressWidth = scrollProgress.offsetWidth;
+    let scrolledPercentage = scrolledDistance / scrollableWidth;
+    let buffer = (barWidth - progressWidth) * scrolledPercentage; // + scrolledPercentage * carouselCards.offsetWidth; //(carouselCards.offsetWidth / carouselCards.scrollWidth) * 100;
+    scrollProgress.style.marginLeft = `${buffer}px`;
+    console.log(`${buffer}px`, scrolledPercentage);
+  });
+
+  leftArrow.addEventListener('click', scrollLeft);
+  rightArrow.addEventListener('click', scrollRight);
+
+  window.addEventListener('scroll', setProgressSize);
+  window.addEventListener('resize', setProgressSize);
 });
 
-leftArrow.addEventListener('click', scrollLeft);
-rightArrow.addEventListener('click', scrollRight);
+// ---
+// END Carousels
 
-window.addEventListener('scroll', setProgressSize);
-window.addEventListener('resize', setProgressSize);
+//Click to scroll on carousels
+const sliders = document.querySelectorAll('.carousel__cards');
+let isDown = false;
+let startX;
+let scrollLeft;
+sliders.forEach(slider => {
+  slider.addEventListener('mousedown', e => {
+    isDown = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+  });
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+  });
+  slider.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
+  });
+});
