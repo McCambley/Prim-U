@@ -47,12 +47,14 @@ function recolorScrolledMenu() {
   // if the user has scrolled beyond the hero block
   if (window.scrollY + 100 > heroHeight) {
     headerContainer.classList.add('header__content_scrolled');
+    hamburger.classList.add('header__hamburger_scrolled');
     logo.classList.add('header__logo_scrolled');
     logoAccent.classList.add('header__logo-accent_scrolled');
     headerLinks.forEach(link => {
       link.classList.add('header__link_scrolled');
     });
   } else {
+    hamburger.classList.remove('header__hamburger_scrolled');
     headerContainer.classList.remove('header__content_scrolled');
     logo.classList.remove('header__logo_scrolled');
     logoAccent.classList.remove('header__logo-accent_scrolled');
@@ -61,8 +63,17 @@ function recolorScrolledMenu() {
     });
   }
 }
+console.log(headerLinks);
 
 hamburger.addEventListener('click', toggleNav);
+headerLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth < 768) {
+      toggleNav();
+    }
+  });
+});
+
 // TODO refactor this to update less often than every scroll
 window.addEventListener('scroll', recolorScrolledMenu);
 // TODO refactor this to update less often than every resize
