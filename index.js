@@ -69,3 +69,51 @@ window.addEventListener('scroll', recolorScrolledMenu);
 window.addEventListener('resize', recolorScrolledMenu);
 
 // HERO FUNCTIONALITY
+
+// CAROUSEL BELOW
+
+const carousel = document.querySelector('.carousel__cards')
+const cards = Array.from(document.querySelectorAll('.carousel__card'));
+
+function showScroll() {
+  console.log("object:", carousel,"scroll left:", carousel.scrollLeft, "max:", carousel.scrollWidth - carousel.clientWidth)
+}
+
+cards.forEach(card => {
+  card.addEventListener('click', (e) => {
+    console.log(e.target.dataset.card);
+    // scroll the window to dataset.card percentage of the carousel window
+    // dataset.card / cards.length 
+  })
+})
+
+carousel.addEventListener('scroll', showScroll)
+
+
+//copying styles from codepen to try
+const slider = carousel;
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', (e) => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk;
+});
