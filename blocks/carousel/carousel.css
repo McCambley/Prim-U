@@ -1,0 +1,111 @@
+/* .carousel * {
+  border: 1px solid red;
+} */
+
+.carousel__cards::-webkit-scrollbar {
+  background: transparent;
+  height: 16px;
+  width: 10px;
+}
+.carousel__cards::-webkit-scrollbar:horizontal:decrement {
+  border-width: 7px 14px 7px 0;
+}
+.carousel__cards::-webkit-scrollbar:horizontal:increment {
+  border-width: 7px 14px 7px 0;
+}
+
+.carousel {
+  /* div */
+  max-width: 1440px;
+  margin: auto;
+  /* end dev */
+  padding: 60px 0 72px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.carousel__cards {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+
+  /* margin-bottom: 16px; */
+}
+
+.carousel__card {
+  min-width: 250px;
+  min-height: 350px;
+  border-radius: 20px;
+  margin-right: 16px;
+  background: #f2f2f2;
+  /* margin-bottom: 60px; */
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.carousel__scroll-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 16px;
+}
+
+.carousel__scroll-arrow {
+  height: 12px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.carousel__scroll-arrow:hover {
+  opacity: 0.8;
+}
+
+.carousel__scroll-bar {
+  width: 85%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #c4c4c4;
+  height: 2px;
+}
+
+.carousel__scroll-progress {
+  height: 2px;
+  width: 50%;
+  border-radius: 10px;
+  background-color: #000;
+}
+
+/*
+.carousel__scroll-bar {
+    width: 100%;
+    min-height: 1em;
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.carousel__scroll-position {
+    height: 5px;
+    width: 50%;
+    background: gray;
+    border: none;
+    border-radius: 50px;
+
+}
+
+.carousel__arrow {
+    width: 20px;
+    height: 20px;
+}*/

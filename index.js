@@ -69,3 +69,43 @@ window.addEventListener('scroll', recolorScrolledMenu);
 window.addEventListener('resize', recolorScrolledMenu);
 
 // HERO FUNCTIONALITY
+
+// ---
+// REVIEWS
+// ---
+
+const carouselCards = document.querySelector('.carousel__cards');
+const carouselCard = document.querySelector('.carousel__card');
+const leftArrow = document.querySelector('.carousel__scroll-arrow_left');
+const rightArrow = document.querySelector('.carousel__scroll-arrow_right');
+const scrollBar = document.querySelector('.carousel__scroll-bar');
+const scrollProgress = document.querySelector('.carousel__scroll-progress');
+
+function setProgressSize() {
+  scrollProgress.style.width = `${(carouselCards.offsetWidth / carouselCards.scrollWidth) * 100}%`;
+}
+
+function scrollLeft() {
+  carouselCards.scrollLeft -= carouselCard.offsetWidth;
+}
+
+function scrollRight() {
+  carouselCards.scrollLeft += carouselCard.offsetWidth;
+}
+
+carouselCards.addEventListener('scroll', () => {
+  let scrolledDistance = carouselCards.scrollLeft;
+  let scrollableWidth = carouselCards.scrollWidth - carouselCards.offsetWidth;
+  let barWidth = scrollBar.offsetWidth;
+  let progressWidth = scrollProgress.offsetWidth;
+  let scrolledPercentage = scrolledDistance / scrollableWidth;
+  let buffer = (barWidth - progressWidth) * scrolledPercentage; // + scrolledPercentage * carouselCards.offsetWidth; //(carouselCards.offsetWidth / carouselCards.scrollWidth) * 100;
+  scrollProgress.style.marginLeft = `${buffer}px`;
+  console.log(`${buffer}px`, scrolledPercentage);
+});
+
+leftArrow.addEventListener('click', scrollLeft);
+rightArrow.addEventListener('click', scrollRight);
+
+window.addEventListener('scroll', setProgressSize);
+window.addEventListener('resize', setProgressSize);
