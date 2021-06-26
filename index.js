@@ -71,6 +71,7 @@ function playVideo(event) {
   const videoContainer = event.target.closest('.primlancers__video-container')
   videoContainer.querySelector('.overlay').classList.add('video_active')
   videoContainer.querySelector('.primlancers__video-button').classList.add('video_active')
+  videoContainer.querySelector('.primlancers__text').style.opacity = 0;
   videoContainer.querySelector('.primlancers__video').src += "?autoplay=1"
 }
 
