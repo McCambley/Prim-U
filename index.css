@@ -16,6 +16,7 @@
 @import url(./blocks/divider/divider.css);
 @import url(./blocks/card/card.css);
 @import url(./blocks/providers/providers.css);
+@import url(./blocks/carousel/carousel.css);
 /* modifiers */
 
 @import url(./blocks/app-for-u/app-for-u.css);

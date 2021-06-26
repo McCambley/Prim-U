@@ -1,129 +1,133 @@
 .app-for-u {
-    background-color: #683d83;
-    padding: 60px 20px;
-    color: #fff;
-    display: flex;
-    flex-wrap: wrap-reverse;
-    justify-content: center;
+  background-color: #683d83;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.app-for-u__wrapper {
+  display: grid;
+  grid-template-areas:
+    'b'
+    'a';
+  /* flex-wrap: wrap-reverse; */
+  /* justify-content: center; */
+  max-width: 1024px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: auto;
+  gap: 60px;
 }
 
 .app-for-u__text-container {
-    width: 100%;
+  width: 100%;
+  grid-area: a;
 }
 
 .app-for-u__title {
-    margin: 0;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 50px;
-    line-height: 59px;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    max-width: 335px;
+  margin: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 59px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  max-width: 335px;
 }
 
 .app-for-u__paragraph {
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    margin: 0;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 30px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 30px;
 }
 
 .app-for-u__image {
-    width: 100%;
-    max-width: 242.57px;
-    margin-bottom: 60.72px;
+  grid-area: b;
+  width: 100%;
+  max-width: 242.57px;
+  margin-bottom: 60.72px;
+  justify-self: center;
+  align-self: center;
 }
 
 .app-for-u__links-container {
-    display: flex;
-    align-items: center;
-    padding: 20.87px 0 0;
+  display: flex;
+  align-items: center;
+  padding: 20.87px 0 0;
 }
 
 .app-for-u__links-container :not(:last-child) {
-    margin-right: 23.21px;
+  margin-right: 23.21px;
 }
 
 .app-for-u__link-ios {
-    max-width: 117.92px;
+  max-width: 117.92px;
 }
 
 .app-for-u__link-android {
-    max-width: 165px;
-}
-
-@media (min-width: 480px) {
-}
-
-@media (min-width: 630px) {
+  max-width: 165px;
 }
 
 @media (min-width: 768px) {
-    .app-for-u {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        padding: 80px 42px;
-    }
+  .app-for-u__wrapper {
+    grid-template-areas: 'a b';
+    /* padding: 80px 42px; */
+  }
 
-    .app-for-u__text-container {
-        max-width: 605px;
-        padding-right: 42px;
-        box-sizing: border-box;
-    }
+  .app-for-u__text-container {
+    max-width: 605px;
+    padding-right: 42px;
+    box-sizing: border-box;
+  }
 
-    .app-for-u__title {
-        margin-bottom: 32px;
-        max-width: 335px;
-    }
-    .app-for-u__paragraph:not(:last-child) {
-        margin-bottom: 32px;
-    }
+  .app-for-u__title {
+    margin-bottom: 32px;
+    max-width: 335px;
+  }
+  .app-for-u__paragraph:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
 
 @media (min-width: 1024px) {
-    .app-for-u {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        padding: 80px 44.43px 90.87px 42px;
-    }
+  .app-for-u {
+    padding: 80px 44.43px 90.87px 42px;
+  }
 
-    .app-for-u__text-container {
-        max-width: 605px;
-        padding-right: 42px;
-        box-sizing: border-box;
-    }
+  .app-for-u__text-container {
+    max-width: 605px;
+    padding-right: 42px;
+    box-sizing: border-box;
+  }
 
-    .app-for-u__title {
-        max-width: 100%;
-    }
+  .app-for-u__title {
+    max-width: 100%;
+  }
 
-    .app-for-u__image {
-        margin-bottom: 0;
-    }
+  .app-for-u__image {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 1440px) {
-    .app-for-u {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        padding: 80px 60px 80.48px;
-    }
+  .app-for-u {
+    padding: 80px 60px 80.48px;
+  }
 
-    .app-for-u__text-container {
-        max-width: 630px;
-        margin: 20px 0 0;
-        max-width: 605px;
-        padding-right: 42px;
-        box-sizing: border-box;
-    }
-    
-    .app-for-u__image {
-        max-width: 300px;
-        margin-bottom: 0;
-    }
+  .app-for-u__text-container {
+    max-width: 630px;
+    margin: 20px 0 0;
+    max-width: 605px;
+    padding-right: 42px;
+    box-sizing: border-box;
+  }
+
+  .app-for-u__image {
+    max-width: 300px;
+    margin-bottom: 0;
+  }
 }
