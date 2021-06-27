@@ -1,23 +1,131 @@
 .primlancers {
-  padding: 80px 20px 60px;
+  padding: 80px 10px 60px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1024px;
+  margin: auto;
 }
 
 .primlancers__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../images/primlancersVideoPreview.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  transition: opacity 0.15s ease;
+}
+
+.primlancers__overlay_playing {
+  opacity: 0;
+}
+
+.primlancers__overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
 }
 
 .primlancers__video-container {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
 }
 
 .primlancers__video-button {
+  position: relative;
+  z-index: 1;
 }
 
 .primlancers__video {
+  width: 100%;
+  height: 100%;
 }
-
+.primlancers__book-link {
+  width: 100%;
+}
 .primlancers__book-button {
+  border: none;
+  background-color: #683d83;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 16px;
+  width: 100%;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
 }
 
-.primlancers__text/* .primlancers {
+.primlancers__text {
+  margin: 0;
+  color: #fff;
+  margin-top: 32px;
+  text-transform: uppercase;
+  font-size: 38px;
+  line-height: 44px;
+  display: none;
+  z-index: 1;
+  position: relative;
+}
+
+.primlancers__lower-text {
+  font-size: 34px;
+  line-height: 40px;
+  margin: 0;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .primlancers {
+    padding: 100px 76px 80px;
+  }
+  .primlancers__text {
+    display: block;
+    transform: translateY(40px);
+  }
+
+  .primlancers__video-button {
+    transform: translateY(40px);
+  }
+
+  .primlancers__video-container {
+    margin-bottom: 60px;
+  }
+
+  .primlancers__lower-text {
+    display: none;
+  }
+
+  .primlancers__book-link {
+    max-width: 232px;
+  }
+}
+/* .primlancers {
   padding: 80px 10px 60px;
   text-align: center;
 }
@@ -203,4 +311,4 @@
 }
 
 @media (min-width: 1440px) {
-} */;
+} */ ;
