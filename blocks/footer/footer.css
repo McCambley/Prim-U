@@ -43,7 +43,7 @@
   text-decoration: none;
   color: inherit;
   opacity: 1;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.15s ease;
 }
 
 .footer__column-link:hover {
