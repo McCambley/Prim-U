@@ -154,7 +154,7 @@
 }
 .carousel__products-button {
   text-transform: uppercase;
-  margin: 30px auto 0;
+  margin: 30px auto;
   padding: 16px 16px;
   border-radius: 10px;
   font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;

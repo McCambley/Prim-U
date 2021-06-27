@@ -10,7 +10,7 @@
 @import url(./blocks/hero/hero.css);
 @import url(./blocks/heading/heading.css);
 @import url(./blocks/treat-yourself/treat-yourself.css);
-@import url(./blocks/faq/faq.css);
+@import url(./blocks/hero/hero.css);
 @import url(./blocks/instagram/instagram.css);
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/divider/divider.css);
@@ -21,7 +21,3 @@
 
 @import url(./blocks/app-for-u/app-for-u.css);
 @import url(./blocks/primlancers/primlancers.css);
-
-:root {
-  scroll-behavior: smooth;
-}
