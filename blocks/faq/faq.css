@@ -148,14 +148,28 @@
 }
 
 @media (min-width: 1024px) {
+  .faq__section-heading {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 60px;
+  }
+
   .faq__subsection {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 42px;
   }
 
+  .faq__question-container_group_primary {
+    margin-bottom: 60px;
+  }
+
+  .faq__question-container_show {
+    margin-bottom: 60px;
+  }
+
   .faq__question-container_group_secondary {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     max-height: 500px;
     opacity: 1;
   }
@@ -171,6 +185,6 @@
     padding: 80px 60px;
   }
   .faq__subsection {
-    gap: 0, 60px;
+    gap: 0 60px;
   }
 }
