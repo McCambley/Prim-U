@@ -1,4 +1,22 @@
 .primlancers {
+}
+
+.primlancers__overlay {
+}
+
+.primlancers__video-container {
+}
+
+.primlancers__video-button {
+}
+
+.primlancers__video {
+}
+
+.primlancers__book-button {
+}
+
+.primlancers__text/* .primlancers {
   padding: 80px 10px 60px;
   text-align: center;
 }
@@ -184,4 +202,4 @@
 }
 
 @media (min-width: 1440px) {
-}
+} */;
