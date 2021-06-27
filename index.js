@@ -1,4 +1,6 @@
+// ---
 // HEADER FUNCTIONALITY
+// ---
 
 const header = document.querySelector('.header');
 const hamburger = document.querySelector('.header__hamburger');
@@ -7,7 +9,7 @@ const logo = document.querySelector('.header__logo');
 const logoAccent = document.querySelector('.header__logo-accent');
 const headerLinks = Array.from(document.querySelectorAll('.header__link'));
 const hero = document.querySelector('.hero');
-const primlancerVideoButton = document.querySelector('.primlancers__video-button')
+const primlancerVideoButton = document.querySelector('.primlancers__video-button');
 
 // toggle menuStatus on overlay click
 function toggleNavOnOverlay(e) {
@@ -64,18 +66,22 @@ function recolorScrolledMenu() {
     });
   }
 }
-console.log(headerLinks);
+
+// --
+// END HEADER
+// BEGIN VIDEO
+// --
 
 //Hide play button and overlay on video and start playing video
 function playVideo(event) {
-  const videoContainer = event.target.closest('.primlancers__video-container')
-  videoContainer.querySelector('.overlay').classList.add('video_active')
-  videoContainer.querySelector('.primlancers__video-button').classList.add('video_active')
+  const videoContainer = event.target.closest('.primlancers__video-container');
+  videoContainer.querySelector('.overlay').classList.add('video_active');
+  videoContainer.querySelector('.primlancers__video-button').classList.add('video_active');
   videoContainer.querySelector('.primlancers__text').style.opacity = 0;
-  videoContainer.querySelector('.primlancers__video').src += "?autoplay=1"
+  videoContainer.querySelector('.primlancers__video').src += '?autoplay=1';
 }
 
-primlancerVideoButton.addEventListener('click', playVideo)
+primlancerVideoButton.addEventListener('click', playVideo);
 
 hamburger.addEventListener('click', toggleNav);
 headerLinks.forEach(link => {
@@ -91,10 +97,9 @@ window.addEventListener('scroll', recolorScrolledMenu);
 // TODO refactor this to update less often than every resize
 window.addEventListener('resize', recolorScrolledMenu);
 
-// HERO FUNCTIONALITY
-
 // ---
-// Carousels Reviews && Products
+// END VIDEO
+// BEGIN CAROUSEL
 // ---
 
 const carousels = document.querySelectorAll('.carousel');
@@ -127,7 +132,6 @@ carousels.forEach(carousel => {
     let scrolledPercentage = scrolledDistance / scrollableWidth;
     let buffer = (barWidth - progressWidth) * scrolledPercentage; // + scrolledPercentage * carouselCards.offsetWidth; //(carouselCards.offsetWidth / carouselCards.scrollWidth) * 100;
     scrollProgress.style.marginLeft = `${buffer}px`;
-    console.log(`${buffer}px`, scrolledPercentage);
   });
 
   leftArrow.addEventListener('click', scrollLeft);
@@ -136,9 +140,6 @@ carousels.forEach(carousel => {
   window.addEventListener('scroll', setProgressSize);
   window.addEventListener('resize', setProgressSize);
 });
-
-// ---
-// END Carousels
 
 //Click to scroll on carousels
 const sliders = document.querySelectorAll('.carousel__cards');
@@ -165,3 +166,134 @@ sliders.forEach(slider => {
     slider.scrollLeft = scrollLeft - walk;
   });
 });
+
+// ---
+// END Carousels
+// BEGIN FAQ FUNCTIONALITY
+// ---
+
+const questionArray = Array.from(document.querySelectorAll('.faq__question-container'));
+const showMoreButtonArray = Array.from(document.querySelectorAll('.faq__show-button'));
+
+// Individual question listeners
+function setQuestionListeners() {
+  questionArray.forEach(item => {
+    const toggle = item.querySelector('.faq__question-toggle');
+    const question = item.querySelector('.faq__question-subcontainer');
+    const answer = item.querySelector('.faq__answer');
+
+    question.addEventListener('click', () => {
+      const questionOpen = question.classList.contains('faq__question-subcontainer_open');
+      if (!questionOpen) {
+        question.classList.add('faq__question-subcontainer_open');
+        answer.classList.add('faq__answer_open');
+        toggle.src = './images/faq-close.png';
+      } else {
+        question.classList.remove('faq__question-subcontainer_open');
+        answer.classList.remove('faq__answer_open');
+        toggle.src = './images/faq-open.png';
+      }
+    });
+  });
+}
+
+function toggleQuestionsArray(questionArray, button, closed, reverseFlag, interval) {
+  questionArray.forEach((question, index, array) => {
+    // timeout opens displays each question in the section in sequence
+    setTimeout(() => {
+      if (closed) {
+        // open question
+        question.classList.add('faq__question-container_show');
+        button.textContent = 'show less';
+      } else {
+        // hide question
+        question.classList.remove('faq__question-container_show');
+        button.textContent = 'show more';
+      }
+      // this equation is used to reverse the sequence in which elements are
+      // hidden depending on whether the button is "showing more" or "showing less"
+    }, Math.abs((reverseFlag - index) * interval));
+  });
+}
+
+// Show more button listeners
+function setShowMoreListener() {
+  showMoreButtonArray.forEach(button => {
+    // question group arrays
+    const secondaryQuestionArray = Array.from(button.parentElement.querySelectorAll('.faq__question-container_group_secondary'));
+    const tertiaryQuestionArray = Array.from(button.parentElement.querySelectorAll('.faq__question-container_group_tertiary'));
+    const quaternaryQuestionArray = Array.from(button.parentElement.querySelectorAll('.faq__question-container_group_quaternary'));
+    // question group combination arrays
+    const threeGroupArray = [...secondaryQuestionArray, ...tertiaryQuestionArray, ...quaternaryQuestionArray];
+    // interleave last two question groups
+    const twoGroupArray = tertiaryQuestionArray
+      .map((value, index) => {
+        return [value, quaternaryQuestionArray[index]];
+      })
+      .flat()
+      .filter(question => question != null);
+    let closed = false;
+    let interval = 25;
+    button.addEventListener('click', () => {
+      closed = !closed;
+      if (window.innerWidth >= 1024) {
+        // open only the third section of questions when the screen is larger than or equal to 1024px
+        // begin iterating over each element in the section
+        let reverseFlag = closed ? 0 : twoGroupArray.length;
+        toggleQuestionsArray(twoGroupArray, button, closed, reverseFlag, interval);
+        // toggleQuestionsArray(quaternaryQuestionArray, button, closed, reverseFlag, interval);
+      } else {
+        // open the second and third sections of questions when the screen is  not larger than or equal to 1024px
+        let reverseFlag = closed ? 0 : threeGroupArray.length;
+        toggleQuestionsArray(threeGroupArray, button, closed, reverseFlag, interval);
+      }
+    });
+  });
+}
+
+function setFaqEventListeners() {
+  // Individual question listeners
+  setQuestionListeners();
+  // Button listeners
+  setShowMoreListener();
+}
+
+setFaqEventListeners();
+
+// ---
+// END FAQ FUNCTIONALITY
+// ---
+
+// tertiaryQuestionArray.forEach((question, index, array) => {
+//   // timeout opens displays each question in the section in sequence
+//   setTimeout(() => {
+//     if (closed) {
+//       // open question
+//       question.classList.add('faq__question-container_show');
+//       button.textContent = 'show less';
+//       reverseFlag = array.length;
+//     } else {
+//       // hide question
+//       question.classList.remove('faq__question-container_show');
+//       button.textContent = 'show more';
+//       reverseFlag = 0;
+//     }
+//     // this equation is used to reverse the sequence in which elements are
+//     // hidden depending on whether the button is "showing more" or "showing less"
+//   }, Math.abs((reverseFlag - index) * interval));
+// });
+
+// extendedSecondaryQuestionArray.forEach((question, index, array) => {
+//   setTimeout(() => {
+//     if (closed) {
+//       question.classList.add('faq__question-container_show');
+//       button.textContent = 'show less';
+//       reverseFlag = array.length;
+//     } else {
+//       question.classList.remove('faq__question-container_show');
+//       button.textContent = 'show more';
+//       reverseFlag = 0;
+//     }
+//   }, Math.abs((reverseFlag - index) * interval));
+// });
+// HERO FUNCTIONALITY
