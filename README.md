@@ -19,4 +19,4 @@ service providers and suppliers with customers.
 
 - Jenna Toff - [GitHub](https://github.com/larkceresin) | [LinkedIn](https://www.linkedin.com/in/jenna-toff/)
 - Jake McCambley - [GitHub](https://github.com/McCambley) | [LinkedIn](https://www.linkedin.com/in/jakemccambley/)
-- David Christoffersen - [GitHub](https://github.com/datvidc) | [LinkedIn](www.linkedin.com/in/davidchristoffersen)
+- Jazzie - [GitHub](https://github.com/Tongkorn)
