@@ -1,7 +1,8 @@
 .card {
   padding: 20px 10px 60px;
   max-width: 1880px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: auto;
 }
 .card__items {
@@ -40,9 +41,16 @@
 .card__content {
   position: absolute;
   inset: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   border-radius: 20px;
@@ -57,16 +65,32 @@
   margin: 0;
 }
 .card__sub-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 20px;
-  align-items: flex-start;
-  justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .card__paragraphs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .card__text {
   color: #fff;
@@ -92,6 +116,8 @@
   padding: 16px;
   background-color: #fff;
   border-radius: 10px;
+  -webkit-transition: color 0.15s ease, background-color 0.15s ease;
+  -o-transition: color 0.15s ease, background-color 0.15s ease;
   transition: color 0.15s ease, background-color 0.15s ease;
   border: none;
   cursor: pointer;
@@ -153,9 +179,16 @@
     padding: 60px 60px;
   }
   .card__sub-content {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .card__text {
     padding: 0;
