@@ -1,16 +1,4 @@
 .page {
   position: relative;
-  font-family: 'Roboto Condensed';
-}
-
-/* breakpoints to check design */
-@media (max-width: 375px) {
-  /* Main Mobile */
-}
-
-@media (max-width: 1024px) {
-  /* Main Tablet */
-}
-@media (max-width: 1440px) {
-  /* Main Desktop */
+  font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
 }

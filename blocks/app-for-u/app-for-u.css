@@ -77,7 +77,7 @@
   max-width: 165px;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .app-for-u__wrapper {
     grid-template-areas: 'a b';
     /* padding: 80px 42px; */
@@ -99,7 +99,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .app-for-u {
     padding: 80px 44.43px 90.87px 42px;
   }
@@ -120,7 +120,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media only screen and (min-width: 1440px) {
   .app-for-u {
     padding: 80px 60px 80.48px;
   }

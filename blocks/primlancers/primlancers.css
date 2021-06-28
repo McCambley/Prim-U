@@ -131,13 +131,7 @@
   cursor: pointer;
 }
 
-@media (min-width: 480px) {
-}
-
-@media (min-width: 630px) {
-}
-
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .primlancers {
     padding: 100px 40px 80px;
   }
@@ -160,7 +154,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .primlancers {
     padding: 100px 88px 80px;
   }
@@ -181,7 +175,4 @@
   .primlancers__book-button {
     margin-top: -60px;
   }
-}
-
-@media (min-width: 1440px) {
 }

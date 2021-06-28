@@ -127,7 +127,7 @@
   background-color: #683d83;
   color: #fff;
 }
-@media screen and (min-width: 680px) {
+@media only screen and (min-width: 680px) {
   .card {
     padding: 60px 40px 60px;
   }
@@ -174,7 +174,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media  only screen and (min-width: 1200px) {
   .card {
     padding: 60px 60px;
   }
@@ -197,7 +197,7 @@
     padding-bottom: 32px;
   }
 }
-@media screen and (min-width: 1700px) {
+@media  only screen and (min-width: 1700px) {
   .card {
     margin: auto;
   }

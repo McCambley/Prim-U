@@ -180,13 +180,13 @@
   color: #fff;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .faq {
     padding: 80px 40px;
   }
 }
 
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .faq__section-heading {
     font-size: 32px;
     line-height: 38px;
@@ -219,7 +219,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media only screen (min-width: 1440px) {
   .faq {
     padding: 80px 60px;
   }
