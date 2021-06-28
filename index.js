@@ -9,7 +9,6 @@ const logo = document.querySelector('.header__logo');
 const logoAccent = document.querySelector('.header__logo-accent');
 const headerLinks = Array.from(document.querySelectorAll('.header__link'));
 const hero = document.querySelector('.hero');
-const primlancerVideoButton = document.querySelector('.primlancers__video-button');
 
 // toggle menuStatus on overlay click
 function toggleNavOnOverlay(e) {
@@ -67,22 +66,6 @@ function recolorScrolledMenu() {
   }
 }
 
-// --
-// END HEADER
-// BEGIN VIDEO
-// --
-
-//Hide play button and overlay on video and start playing video
-function playVideo(event) {
-  const videoContainer = event.target.closest('.primlancers__video-container');
-  videoContainer.querySelector('.overlay').classList.add('video_active');
-  videoContainer.querySelector('.primlancers__video-button').classList.add('video_active');
-  videoContainer.querySelector('.primlancers__text').style.opacity = 0;
-  videoContainer.querySelector('.primlancers__video').src += '?autoplay=1';
-}
-
-primlancerVideoButton.addEventListener('click', playVideo);
-
 hamburger.addEventListener('click', toggleNav);
 headerLinks.forEach(link => {
   link.addEventListener('click', () => {
@@ -96,6 +79,39 @@ headerLinks.forEach(link => {
 window.addEventListener('scroll', recolorScrolledMenu);
 // TODO refactor this to update less often than every resize
 window.addEventListener('resize', recolorScrolledMenu);
+
+// --
+// END HEADER
+// BEGIN VIDEO
+// --
+
+//Hide play button and overlay on video and start playing video
+// function playVideo(event) {
+//   const videoContainer = event.target.closest('.primlancers__video-container');
+//   videoContainer.querySelector('.overlay').classList.add('video_active');
+//   videoContainer.querySelector('.primlancers__video-button').classList.add('video_active');
+//   videoContainer.querySelector('.primlancers__text').style.opacity = 0;
+//   videoContainer.querySelector('.primlancers__video').src += '?autoplay=1';
+// }
+
+const primlancerVideoButton = document.querySelector('.primlancers__video-button');
+const primlancerVideo = document.querySelector('.primlancers__video');
+const primlancerOverlay = document.querySelector('.primlancers__overlay');
+const primlancerContainer = document.querySelector('.primlancers__video-container');
+
+function playVideo() {
+  primlancerVideo.play();
+  primlancerOverlay.classList.add('primlancers__overlay_playing');
+}
+
+function pauseVideo() {
+  primlancerOverlay.classList.remove('primlancers__overlay_playing');
+  primlancerVideo.pause();
+  primlancerVideo.currentTime = 0;
+}
+
+primlancerVideoButton.addEventListener('click', playVideo);
+primlancerVideo.addEventListener('click', pauseVideo);
 
 // ---
 // END VIDEO
