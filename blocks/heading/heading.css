@@ -24,6 +24,10 @@ I thought I'd start thet trend of modifying margins where need be  */
   margin-bottom: 30px;
 }
 
+.heading_section_primlancers {
+  padding: 0 10px;
+}
+
 @media screen and (min-width: 500px) {
   .heading {
     font-size: 50px;
@@ -35,7 +39,7 @@ I thought I'd start thet trend of modifying margins where need be  */
 }
 
 @media (min-width: 1024px) {
-  .header_primlancers {
+  .heading_section_primlancers {
     margin-bottom: 60px;
   }
 }
