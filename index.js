@@ -85,15 +85,6 @@ window.addEventListener('resize', recolorScrolledMenu);
 // BEGIN VIDEO
 // --
 
-//Hide play button and overlay on video and start playing video
-// function playVideo(event) {
-//   const videoContainer = event.target.closest('.primlancers__video-container');
-//   videoContainer.querySelector('.overlay').classList.add('video_active');
-//   videoContainer.querySelector('.primlancers__video-button').classList.add('video_active');
-//   videoContainer.querySelector('.primlancers__text').style.opacity = 0;
-//   videoContainer.querySelector('.primlancers__video').src += '?autoplay=1';
-// }
-
 const primlancerVideoButton = document.querySelector('.primlancers__video-button');
 const primlancerVideo = document.querySelector('.primlancers__video');
 const primlancerOverlay = document.querySelector('.primlancers__overlay');
@@ -102,12 +93,23 @@ const primlancerContainer = document.querySelector('.primlancers__video-containe
 function playVideo() {
   primlancerVideo.play();
   primlancerOverlay.classList.add('primlancers__overlay_playing');
+  window.addEventListener('keydown', pauseWithSpace);
+  primlancerVideo.controls = true;
 }
 
 function pauseVideo() {
   primlancerOverlay.classList.remove('primlancers__overlay_playing');
   primlancerVideo.pause();
   primlancerVideo.currentTime = 0;
+  window.removeEventListener('keydown', pauseWithSpace);
+  primlancerVideo.controls = false;
+}
+
+function pauseWithSpace(evt) {
+  if (evt.keyCode == 32) {
+    evt.preventDefault();
+    pauseVideo();
+  }
 }
 
 primlancerVideoButton.addEventListener('click', playVideo);
