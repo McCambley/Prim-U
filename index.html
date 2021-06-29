@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=description
+        content="Prim-U is a beauty & wellness platform that connects professional service providers and suppliers with customers.">
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
@@ -17,7 +19,7 @@
     <section class="header">
         <div class="header__content">
             <div class="header__logo-container">
-                <a href="/">
+                <a href="/" aria-label="Head to Prim-U's Homepage">
                     <svg class="header__logo" viewBox="0 0 100 33" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="m32.542 18.443v4.64h-3.2968v-13.676h5.4571c1.0457 0 1.9693 0.19412 2.7708 0.58235 0.8078 0.38194 1.4309 0.92984 1.8692 1.6437 0.4446 0.7075 0.6669 1.5122 0.6669 2.4139 0 1.3337-0.4791 2.4014-1.4371 3.2029-0.9518 0.7952-2.2605 1.1928-3.9261 1.1928h-2.104zm0-2.5454h2.1603c0.6387 0 1.124-0.1597 1.4559-0.479 0.3381-0.3194 0.5072-0.7702 0.5072-1.3525 0-0.6387-0.1722-1.1491-0.5166-1.531-0.3444-0.382-0.814-0.5761-1.4089-0.5824h-2.1979v3.9449z" />
@@ -43,9 +45,10 @@
                 <img src="./images/hamburger-open.svg" alt="Open menu" class="header__hamburger">
             </div>
             <nav class="header__links">
-                <a href="https://www.prim-u.app/en/list" class="header__link">make a booking with us</a>
+                <a href="https://www.prim-u.app/en/list" rel="noopener noreferrer" class="header__link">make a booking
+                    with us</a>
                 <a href="https://admin.prim-u.app/en/onboard/merchant-signup?marketplace_reference_id=80a44a38349c4c6cbc0ac465d9ce7129&user=Primlancer"
-                    class="header__link">work with us</a>
+                    rel="noopener noreferrer" class="header__link">work with us</a>
                 <a href="#faq" class="header__link">faq</a>
             </nav>
         </div>
@@ -60,7 +63,7 @@
     <section class="card" id="customers">
         <div class="card__image card__image_type_customers">
             <div class="card__content">
-                <h3 class="card__heading">For Customers</h3>
+                <h2 class="card__heading">For Customers</h2>
                 <div class="card__sub-content">
                     <div class="card__paragraphs">
                         <p class="card__text card__text_type_first">Enjoy beauty treatments wherever U are</p>
@@ -83,37 +86,38 @@
 
         <ul class="treat-yourself__card-area">
             <li class="treat-yourself__card treat-yourself__card_type_massage">
-                <img class="treat-yourself__card-image" src="./images/massage.png">
+                <img class="treat-yourself__card-image" alt="Get a Massage" src="./images/massage.png">
                 <div class="treat-yourself__text-container">
                     <p class="treat-yourself__text">Massage</p>
                 </div>
             </li>
             <li class="treat-yourself__card treat-yourself__card_type_waxing">
-                <img class="treat-yourself__card-image" src="./images/waxing.png">
+                <img class="treat-yourself__card-image" alt="Receive Waxing services" src="./images/waxing.png">
                 <div class="treat-yourself__text-container">
                     <p class="treat-yourself__text">Waxing</p>
                 </div>
             </li>
             <li class="treat-yourself__card treat-yourself__card_type_make-up">
-                <img class="treat-yourself__card-image" src="./images/makeUp.png">
+                <img class="treat-yourself__card-image" alt="Get your Make Up done" src="./images/makeUp.png">
                 <div class="treat-yourself__text-container">
                     <p class="treat-yourself__text">Make-Up</p>
                 </div>
             </li>
             <li class="treat-yourself__card treat-yourself__card_type_maincure">
-                <img class="treat-yourself__card-image" src="./images/manicure.png">
+                <img class="treat-yourself__card-image" alt="Get a Manicure" src="./images/manicure.png">
                 <div class="treat-yourself__text-container">
                     <p class="treat-yourself__text">Manicure</p>
                 </div>
             </li>
             <li class="treat-yourself__card treat-yourself__card_type_hair">
-                <img class="treat-yourself__card-image" src="./images/hair.png">
+                <img class="treat-yourself__card-image" alt="Get your Hair done" src="./images/hair.png">
                 <div class="treat-yourself__text-container">
                     <p class="treat-yourself__text">Hair</p>
                 </div>
             </li>
             <li class="treat-yourself__card treat-yourself__card_type_male-grooming">
-                <img class="treat-yourself__card-image" src="./images/maleGrooming.png">
+                <img class="treat-yourself__card-image" alt="Male grooming services are available too"
+                    src="./images/maleGrooming.png">
                 <div class="treat-yourself__text-container">
                     <p class="treat-yourself__text">Male Grooming</p>
                 </div>
@@ -237,11 +241,13 @@
                     experience and 100% satisfaction. This is our promise.
                 </p>
                 <div class="app-for-u__links-container">
-                    <a href="https://apps.apple.com/za/app/prim-u/id1377092370" target="_blank">
+                    <a href="https://apps.apple.com/za/app/prim-u/id1377092370" rel="noopener noreferrer"
+                        target="_blank" aria-label="Get the App in the App Store">
                         <img src="./images/download_app-ios.svg" alt="Our app is now available on App Store"
                             class="app-for-u__link-ios">
                     </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.yelo.primu" target="_blank">
+                    <a href="https://play.google.com/store/apps/details?id=com.yelo.primu" rel="noopener noreferrer"
+                        target="_blank" aria-label="Get the App on Google Play">
                         <img src="./images/download_app-android.png" alt="Our app is now available on Google Play"
                             class="app-for-u__link-android">
                     </a>
@@ -251,26 +257,25 @@
         </div>
     </section>
     <section class="primlancers">
-        <h2 class="heading primlancers__title">
+        <h2 class="heading heading_section_primlancers">
             <span class="heading_span">Primlancers</span>
             at work
         </h2>
         <div class="primlancers__video-container">
-            <div class="overlay">
-                <button class="primlancers__video-button"></button>
+            <div class="primlancers__overlay">
+                <img class="primlancers__video-button" src="./images/video-play-button.svg" alt="Play video" autoplay>
+                <h3 class="primlancers__text">
+                    Prim-u make up
+                </h3>
             </div>
-            <iframe class="primlancers__video" width="560" height="315" src="https://www.youtube.com/embed/SRIv2ziiO2Q"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-            <h3 class="heading primlancers__text">
-                Prim-u make up
-            </h3>
+            <video class="primlancers__video" src="./images/primlancer-video.mp4"></video>
+        </div>
+        <h3 class="primlancers__lower-text">Prim-U Make Up</h3>
+        <a class="primlancers__book-link" href="https://www.prim-u.app/en/list">
             <button class="primlancers__book-button">
                 Book a make up
             </button>
-        </div>
+        </a>
     </section>
     <hr class="divider">
     <section class="carousel carousel_type_review">
@@ -1491,7 +1496,8 @@
             <p class="instagram__subtitle">Get information about beauty routines and products right in your
                 feed!
             </p>
-            <a href="https://www.instagram.com/prim_uapp/" target="_blank" class="instagram__button-wrapper">
+            <a href="https://www.instagram.com/prim_uapp/" target="_blank" class="instagram__button-wrapper"
+                aria-label="Follow us on Instagram" rel="noopener noreferrer">
                 <button class="instagram__button" type="button">Subscribe</button>
             </a>
         </div>
@@ -1501,17 +1507,21 @@
             <h2 class="footer__column-heading">PRIM-U APP &copy; 2020</h2>
             <ul class="footer__column-link-container">
                 <li class="footer__link-wrapper">
-                    <a href="https://www.prim-u.app/en/list" class="footer__column-link">Prim-U App</a>
+                    <a href="https://www.prim-u.app/en/list" rel="noopener noreferrer"
+                        class="footer__column-link">Prim-U App</a>
                 </li>
                 <li class="footer__link-wrapper">
-                    <a href="https://prim-u.com/privacy-policy/" class="footer__column-link">Prim-U Privacy Policy</a>
+                    <a href="https://prim-u.com/privacy-policy/" rel="noopener noreferrer"
+                        class="footer__column-link">Prim-U Privacy Policy</a>
                 </li>
                 <li class="footer__link-wrapper">
-                    <a href="https://prim-u.com/ucg-policy/" class="footer__column-link">Prim-U User Generated Content
+                    <a href="https://prim-u.com/ucg-policy/" rel="noopener noreferrer"
+                        class="footer__column-link">Prim-U User Generated Content
                         Policy</a>
                 </li>
                 <li class="footer__link-wrapper">
-                    <a href="https://prim-u.com/terms-of-use/" class="footer__column-link">Prim-U Website Terms of
+                    <a href="https://prim-u.com/terms-of-use/" rel="noopener noreferrer"
+                        class="footer__column-link">Prim-U Website Terms of
                         Use</a>
                 </li>
             </ul>
@@ -1520,11 +1530,12 @@
             <h2 class="footer__column-heading">CONTACT US </h2>
             <ul class="footer__column-link-container">
                 <li class="footer__link-wrapper">
-                    <a href="mailto:hello@prim-u.com" class="footer__column-link" target="_blank"
-                        rel="noopener noreferrer">hello@prim-u.com</a>
+                    <a href="mailto:hello@prim-u.com" rel="noopener noreferrer" class="footer__column-link"
+                        target="_blank" rel="noopener noreferrer" aria-label="Eamil Us">hello@prim-u.com</a>
                 </li>
                 <li class="footer__link-wrapper">
-                    <a href="tel:+311234567" class="footer__column-link">+31-123-45-67</a>
+                    <a href="tel:+311234567" rel="noopener noreferrer" class="footer__column-link"
+                        aria-label="Call Us">+31-123-45-67</a>
                 </li>
             </ul>
         </div>

@@ -13,7 +13,7 @@
 
 .heading_carousel {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0 28px;
   text-align: center;
 }
@@ -24,6 +24,10 @@ I thought I'd start thet trend of modifying margins where need be  */
   margin-bottom: 30px;
 }
 
+.heading_section_primlancers {
+  padding: 0 10px;
+}
+
 @media only screen and (min-width: 500px) {
   .heading {
     font-size: 50px;
@@ -31,5 +35,11 @@ I thought I'd start thet trend of modifying margins where need be  */
   }
   .heading_section_instagram {
     margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading_section_primlancers {
+    margin-bottom: 60px;
   }
 }
