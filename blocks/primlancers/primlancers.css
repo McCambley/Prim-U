@@ -129,7 +129,7 @@
   text-transform: uppercase;
 }
 
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .primlancers {
     padding: 100px 76px 80px;
   }
