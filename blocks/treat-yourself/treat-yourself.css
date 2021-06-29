@@ -57,7 +57,7 @@
 }
 .treat-yourself__text {
   font-size: 30px;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
   font-weight: 700;
   line-height: 36px;
   margin: 0;
@@ -68,12 +68,12 @@
   line-height: 44px;
 }
 
-@media screen and (min-width: 435px) {
+@media only screen and (min-width: 435px) {
   .treat-yourself__card_type_male-grooming .treat-yourself__text {
     padding: 0 0;
   }
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .treat-yourself {
     padding: 0 40px 100px;
   }
@@ -87,7 +87,7 @@
     line-height: 44px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) {
   .treat-yourself {
     padding: 0 60px 100px;
   }

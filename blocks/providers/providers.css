@@ -83,7 +83,7 @@
   display: block;
   margin: 30px 20px;
 }
-@media screen and (min-width: 680px) {
+@media only screen and (min-width: 680px) {
   .providers {
     padding: 60px 40px 0;
   }
@@ -104,7 +104,7 @@
     margin: 40px 0;
   }
 }
-@media screen and (min-width: 1100px) {
+@media only screen and (min-width: 1100px) {
   .providers {
     padding: 100px 60px 0;
   }

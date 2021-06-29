@@ -142,7 +142,7 @@
 }
 
 /* first media query prevents open-mobile-nav bar from remaining if open when screen expands */
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .header_open {
     height: 100vh;
   }
@@ -167,7 +167,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .header {
     padding: 0;
   }
@@ -252,7 +252,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .header__content {
     padding: 60px;
   }

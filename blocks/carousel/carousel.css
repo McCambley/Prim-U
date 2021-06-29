@@ -108,8 +108,9 @@
 }
 
 .carousel__text {
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   color: #5c5c5c;
+  font-weight: 400;
   font-size: 18px;
   line-height: 28px;
   padding: 0;
@@ -176,6 +177,7 @@
   margin: 20px 0;
   border: none;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 400;
   font-size: 18px;
   line-height: 28px;
 }
@@ -198,38 +200,15 @@
 .carousel__products-button:hover {
   cursor: pointer;
 }
-/*
-.carousel__scroll-bar {
-    width: 100%;
-    min-height: 1em;
-    border: 1px solid green;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-}
 
-.carousel__scroll-position {
-    height: 5px;
-    width: 50%;
-    background: gray;
-    border: none;
-    border-radius: 50px;
-
-}
-
-.carousel__arrow {
-    width: 20px;
-    height: 20px;
-}*/
-
-@media (min-width: 430px) {
+@media only screen and (min-width: 430px) {
   .carousel__card {
     min-width: 434px;
     min-height: 0;
   }
 }
 
-@media screen and (min-width: 750px) {
+@media only screen and (min-width: 750px) {
   .carousel {
     margin: auto;
     padding: 60px 40px 80px;
@@ -259,13 +238,13 @@
     padding: 16px 42px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .carousel__card-heading_type_product {
     font-size: 22px;
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media only screen and (min-width: 1280px) {
   .carousel {
     margin: auto;
     padding: 60px 60px 80px;

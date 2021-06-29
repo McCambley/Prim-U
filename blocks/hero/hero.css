@@ -26,7 +26,8 @@
 
 .hero__heading {
   color: #fff;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+  font-weight: 700;
   width: 100%;
   max-width: 460px;
   text-align: center;
@@ -35,7 +36,7 @@
   margin: 0;
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 480px) {
   .hero__buffer {
     display: none;
   }
@@ -60,20 +61,20 @@
   }
 }
 
-@media (min-width: 630px) {
+@media only screen and (min-width: 630px) {
   .hero__heading {
     margin-bottom: 0;
   }
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .hero__content {
     background-image: url('../../images/heading.png');
     background-size: cover;
   }
 }
 
-@media (min-width: 1440px) {
+@media only screen and (min-width: 1440px) {
   .hero__content {
     max-width: 1740px;
     padding: 60px;
