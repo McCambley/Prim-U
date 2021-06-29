@@ -38,7 +38,7 @@ I thought I'd start thet trend of modifying margins where need be  */
   }
 }
 
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .heading_section_primlancers {
     margin-bottom: 60px;
   }
