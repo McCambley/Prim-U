@@ -19,7 +19,7 @@
     <section class="header">
         <div class="header__content">
             <div class="header__logo-container">
-                <a href="/" aria-label="Head to Prim-U's Homepage">
+                <a href="#hero" aria-label="Head to Prim-U's Homepage">
                     <svg class="header__logo" viewBox="0 0 100 33" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="m32.542 18.443v4.64h-3.2968v-13.676h5.4571c1.0457 0 1.9693 0.19412 2.7708 0.58235 0.8078 0.38194 1.4309 0.92984 1.8692 1.6437 0.4446 0.7075 0.6669 1.5122 0.6669 2.4139 0 1.3337-0.4791 2.4014-1.4371 3.2029-0.9518 0.7952-2.2605 1.1928-3.9261 1.1928h-2.104zm0-2.5454h2.1603c0.6387 0 1.124-0.1597 1.4559-0.479 0.3381-0.3194 0.5072-0.7702 0.5072-1.3525 0-0.6387-0.1722-1.1491-0.5166-1.531-0.3444-0.382-0.814-0.5761-1.4089-0.5824h-2.1979v3.9449z" />
@@ -45,15 +45,16 @@
                 <img src="./images/hamburger-open.svg" alt="Open menu" class="header__hamburger">
             </div>
             <nav class="header__links">
-                <a href="https://www.prim-u.app/en/list" rel="noopener noreferrer" class="header__link">make a booking
+                <a href="https://www.prim-u.app/en/list" rel="noopener noreferrer" target="_blank"
+                    class="header__link">make a booking
                     with us</a>
                 <a href="https://admin.prim-u.app/en/onboard/merchant-signup?marketplace_reference_id=80a44a38349c4c6cbc0ac465d9ce7129&user=Primlancer"
-                    rel="noopener noreferrer" class="header__link">work with us</a>
+                    rel="noopener noreferrer" target="_blank" class="header__link">work with us</a>
                 <a href="#faq" class="header__link">faq</a>
             </nav>
         </div>
     </section>
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="hero__buffer"></div>
         <div class="hero__content">
             <h1 class="hero__heading">REINVENTING BEAUTY ON DEMAND</h1>
@@ -74,8 +75,11 @@
                             Simply click, pick a treatment and we’ll come to U.
                         </p>
                     </div>
-                    <button onclick="window.location.href='https://www.prim-u.app/en/list'" class="card__button">Make A
-                        Booking</button>
+                    <a href="https://www.prim-u.app/en/list" class="card__button-wrapper" rel="noopener noreferrer"
+                        target="_blank">
+                        <button class="card__button">Make A
+                            Booking</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -86,41 +90,53 @@
 
         <ul class="treat-yourself__card-area">
             <li class="treat-yourself__card treat-yourself__card_type_massage">
-                <img class="treat-yourself__card-image" alt="Get a Massage" src="./images/massage.png">
-                <div class="treat-yourself__text-container">
-                    <p class="treat-yourself__text">Massage</p>
-                </div>
+                <a href="https://www.prim-u.app/en/list" target="_blank" rel="noopener noreferrer">
+                    <img class="treat-yourself__card-image" alt="Get a Massage" src="./images/massage.png">
+                    <div class="treat-yourself__text-container">
+                        <p class="treat-yourself__text">Massage</p>
+                    </div>
+                </a>
             </li>
             <li class="treat-yourself__card treat-yourself__card_type_waxing">
-                <img class="treat-yourself__card-image" alt="Receive Waxing services" src="./images/waxing.png">
-                <div class="treat-yourself__text-container">
-                    <p class="treat-yourself__text">Waxing</p>
-                </div>
+                <a href="https://www.prim-u.app/en/list" target="_blank" rel="noopener noreferrer">
+                    <img class="treat-yourself__card-image" alt="Receive Waxing services" src="./images/waxing.png">
+                    <div class="treat-yourself__text-container">
+                        <p class="treat-yourself__text">Waxing</p>
+                    </div>
+                </a>
             </li>
             <li class="treat-yourself__card treat-yourself__card_type_make-up">
-                <img class="treat-yourself__card-image" alt="Get your Make Up done" src="./images/makeUp.png">
-                <div class="treat-yourself__text-container">
-                    <p class="treat-yourself__text">Make-Up</p>
-                </div>
+                <a href="https://www.prim-u.app/en/list" target="_blank" rel="noopener noreferrer">
+                    <img class="treat-yourself__card-image" alt="Get your Make Up done" src="./images/makeUp.png">
+                    <div class="treat-yourself__text-container">
+                        <p class="treat-yourself__text">Make-Up</p>
+                    </div>
+                </a>
             </li>
             <li class="treat-yourself__card treat-yourself__card_type_maincure">
-                <img class="treat-yourself__card-image" alt="Get a Manicure" src="./images/manicure.png">
-                <div class="treat-yourself__text-container">
-                    <p class="treat-yourself__text">Manicure</p>
-                </div>
+                <a href="https://www.prim-u.app/en/list" target="_blank" rel="noopener noreferrer">
+                    <img class="treat-yourself__card-image" alt="Get a Manicure" src="./images/manicure.png">
+                    <div class="treat-yourself__text-container">
+                        <p class="treat-yourself__text">Manicure</p>
+                    </div>
+                </a>
             </li>
             <li class="treat-yourself__card treat-yourself__card_type_hair">
-                <img class="treat-yourself__card-image" alt="Get your Hair done" src="./images/hair.png">
-                <div class="treat-yourself__text-container">
-                    <p class="treat-yourself__text">Hair</p>
-                </div>
+                <a href="https://www.prim-u.app/en/list" target="_blank" rel="noopener noreferrer">
+                    <img class="treat-yourself__card-image" alt="Get your Hair done" src="./images/hair.png">
+                    <div class="treat-yourself__text-container">
+                        <p class="treat-yourself__text">Hair</p>
+                    </div>
+                </a>
             </li>
             <li class="treat-yourself__card treat-yourself__card_type_male-grooming">
-                <img class="treat-yourself__card-image" alt="Male grooming services are available too"
-                    src="./images/maleGrooming.png">
-                <div class="treat-yourself__text-container">
-                    <p class="treat-yourself__text">Male Grooming</p>
-                </div>
+                <a href="https://www.prim-u.app/en/list" target="_blank" rel="noopener noreferrer">
+                    <img class="treat-yourself__card-image" alt="Male grooming services are available too"
+                        src="./images/maleGrooming.png">
+                    <div class="treat-yourself__text-container">
+                        <p class="treat-yourself__text">Male Grooming</p>
+                    </div>
+                </a>
             </li>
         </ul>
     </section>
@@ -139,8 +155,11 @@
                                 pampered at your convenience. The Prim-U App will connect you to
                                 the right Prim-U Lancers and businesses to get you ready.
                             </p>
-                            <button onclick="window.location.href='https://www.prim-u.app/en/list'"
-                                class="card__button">Make A Booking</button>
+                            <a href="https://www.prim-u.app/en/list" class="card__button-wrapper"
+                                rel="noopener noreferrer" target="_blank">
+                                <button class="card__button">Make A
+                                    Booking</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -155,8 +174,11 @@
                                 large or small groups. From getting ready to Fashion shows, to
                                 spoiling your mom and her sisters . We connect U.
                             </p>
-                            <button onclick="window.location.href='https://www.prim-u.app/en/list'"
-                                class="card__button">Make A Booking</button>
+                            <a href="https://www.prim-u.app/en/list" class="card__button-wrapper"
+                                rel="noopener noreferrer" target="_blank">
+                                <button class="card__button">Make A
+                                    Booking</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -172,8 +194,11 @@
                                 where it really matters the most. The first step would be to
                                 download the Prim-U App.
                             </p>
-                            <button onclick="window.location.href='https://www.prim-u.app/en/list'"
-                                class="card__button">Make A Booking</button>
+                            <a href="https://www.prim-u.app/en/list" class="card__button-wrapper"
+                                rel="noopener noreferrer" target="_blank">
+                                <button class="card__button">Make A
+                                    Booking</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -189,9 +214,11 @@
                 <div class="provider__image provider__image_type_freelance">
                     <div class="provider__card-content">
                         <h3 class="provider__card-heading">For Freelancers</h3>
-                        <button
-                            onclick="window.location.href='https://admin.prim-u.app/en/onboard/merchant-signup?marketplace_reference_id=80a44a38349c4c6cbc0ac465d9ce7129&user=Primlancer'"
-                            class="provider__card-button">Sign Up</button>
+                        <a href="https://admin.prim-u.app/en/onboard/merchant-signup?marketplace_reference_id=80a44a38349c4c6cbc0ac465d9ce7129&user=Primlancer"
+                            target="_blank" rel="noopener noreferrer">
+                            <button class="provider__card-button">
+                                Sign Up</button>
+                        </a>
                     </div>
                 </div>
                 <p class="provider__text">Connecting U to our network of customers
@@ -205,9 +232,10 @@
                 <div class="provider__image provider__image_type_business">
                     <div class="provider__card-content">
                         <h3 class="provider__card-heading">For Salons / Spas</h3>
-                        <button
-                            onclick="window.location.href='https://admin.prim-u.app/en/onboard/merchant-signup?marketplace_reference_id=80a44a38349c4c6cbc0ac465d9ce7129&user=Primlancer'"
-                            class="provider__card-button">Sign Up</button>
+                        <a href="https://admin.prim-u.app/en/onboard/merchant-signup?marketplace_reference_id=80a44a38349c4c6cbc0ac465d9ce7129&user=Primlancer"
+                            target="_blank" rel="noopener noreferrer">
+                            <button class="provider__card-button">
+                                Sign Up</button></a>
                     </div>
                 </div>
                 <p class="provider__text">
@@ -271,7 +299,8 @@
             <video class="primlancers__video" src="./images/primlancer-video.mp4"></video>
         </div>
         <h3 class="primlancers__lower-text">Prim-U Make Up</h3>
-        <a class="primlancers__book-link" href="https://www.prim-u.app/en/list">
+        <a class="primlancers__book-link" href="https://www.prim-u.app/en/list" rel="noopener noreferrer"
+            target="_blank">
             <button class="primlancers__book-button">
                 Book a make up
             </button>
@@ -484,7 +513,7 @@
                     <div class="faq__question-container faq__question-container_group_primary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">How does Prim-u work?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             We provide an on-demand platform for the empowerment of beauty and wellness entrepreneurs by
@@ -498,7 +527,7 @@
                     <div class="faq__question-container faq__question-container_group_primary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">How do you differ from other on-demand beauty companies?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Because we see the bigger picture. One of our major differentiation is
@@ -512,7 +541,7 @@
                     <div class="faq__question-container faq__question-container_group_primary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">Are your prices affordable?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Compared to the traditional salon, Prim-U has virtually no overhead, so
@@ -525,7 +554,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">Is there anything I'll need to have for my appointment or does the
                                 professional Primlancer provide her or his own equipment and products?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Every Primlancer carries her or his own set of tools and products. Kindly
@@ -536,7 +565,7 @@
                     <div class="faq__question-container faq__question-container_group_primary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">How do I know I can trust Prim-U professionals in my home?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Our team of professionals go through a strict vetting process. We also
@@ -552,7 +581,7 @@
                     <div class="faq__question-container faq__question-container_group_secondary">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">How should I get ready for a hair-cut appointment?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Wash and condition your hair prior to your appointment
@@ -563,7 +592,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">
                                 Should I do anything to my skin before a make-up service?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">Simply cleanse and hydrate your skin prior to a make-up service, and the
                             Primlancer will take care of the rest.
@@ -573,7 +602,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">
                                 How should I prepare for strip and band eyelashes?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">Have your eye area cleansed of makeup, mascara, and free of any creams,
                             lotions, or oils.
@@ -584,7 +613,7 @@
                             <h4 class="faq__question">
                                 Is it OK if I want the stylist or makeup artist to use some of my
                                 personal products?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">You can speak with your stylist about the products you would like to use.
                         </p>
@@ -594,7 +623,7 @@
                             <h4 class="faq__question">
                                 For up-dos, braids, twist, knots, and locks should I do anything
                                 to my hair before the services?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             All you need to do is wash your hair at least 24 hours prior to the styling. Your stylist
@@ -610,7 +639,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">Who are the Prim-U Primlancers?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             We have hand-picked each one of our professionally trained stylists and make-up artists.
@@ -623,7 +652,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">How do I get ready for my Prim-U appointment?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             For blow-outs, wash your hair prior to the appointment and have a place to sit that is near
@@ -642,7 +671,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">Can I select my professional Primlancer?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Yes you can select your Primlancer. It is important to us to provide the most personalized
@@ -657,7 +686,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">What services can I request on Prim-U?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Male Grooming, Hair, Make up, Massages, Nails, Facials, Waxing, Brows and Lashes. New on the
@@ -669,7 +698,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">How much should I tip my Primlencer?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             It is up to you. All our Primlancers are professionals in their field and are passionate
@@ -680,7 +709,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">What is Prim-U’s cancellation policy?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             We know that things change, so we make it easy for you to cancel your reservations. If you
@@ -710,7 +739,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">When can I request a Prim-U service?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Prim-U services are available from 8:00 am and our last appointment time is at 10:00pm,
@@ -723,7 +752,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">I love Prim-U. How do I promote it?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             We appreciate the love! Go ahead and invite your friends and family to use Prim-U. Or simply
@@ -737,7 +766,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">How do I contact Prim-U?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             You can contact our Customer Service via email or phone. Call us at 0600703045 or email us
@@ -749,7 +778,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">Is there a limit to how often I can get my hair or make-up done
                                 by Prim-U?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             No, not at all. We encourage you to enjoy our services as often as possible.
@@ -760,7 +789,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">I just want advice for my hair, can I still reach out to Prim-U?
                             </h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             No, unfortunately we do not have that individual service available. However, if you do have
@@ -773,7 +802,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">Who do I contact Prim-U if I am not satisfied with my services?
                             </h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             View the contact us section to see out contact details
@@ -784,7 +813,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">Who do I contact if my Primlancer (s) went above and beyond for
                                 me?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Please call us at 0600703045 or send us an email to info@prim-u.com. We are certain that our
@@ -795,7 +824,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">Does Prim-U provide services for children?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Yes, we do.
@@ -806,7 +835,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">The weather (rain, snow, etc.) messed up my (hair, make-up), can
                                 I get a Prim-U stylist to come and fix it for free?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Yes. Your satisfaction is of utmost importance to us.
@@ -822,7 +851,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">Do you provide services for men?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Yes, we do.
@@ -832,7 +861,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">Can I book an appointment within the hour I need the service?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             We suggest booking at least 3 hours before you need your appointment to give our Primlancer
@@ -843,7 +872,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">How do I prepare for my hair cut?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Grab a seat and relax. All we ask is that you position your chair in an area where our
@@ -855,7 +884,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">When do I pay for my appointment?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             After you book an appointment with us, the full amount will be placed on charge to secure
@@ -866,7 +895,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">Do you accept cash?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             We only accept credit, debit cards and mobile money payments for booking. This allows us to
@@ -877,7 +906,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">Do I need to let Prim-U know if I have pets?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Yes you should let Prim-U customer service know if you have pets for the right professional
@@ -889,7 +918,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">May I book two appointments at the same time?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Yes, you may.
@@ -899,7 +928,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">How do I reach Prim-U for press inquiries?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Please send us an email to info@prim-u.com
@@ -909,7 +938,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">What do I do if a Primlancer does not show up?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             If that happens, please give us a call at 0600703045 or send us an email at info@prim-u.com
@@ -920,7 +949,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">What do you require from us?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Reserve an area/conference room ( approximately 25 square feet per primlancer) to set up
@@ -932,7 +961,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">I would like a custom service. How do I request it?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Prim-U tries its best to provide the best and most comprehensive list of services. We can
@@ -947,7 +976,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">What specific services do you provide? What are the prices? How
                                 long do they take?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             The cost of services includes all petrol, travel, products, and service costs.
@@ -958,7 +987,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">What are your Terms and Conditions?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             You can find our Terms and Conditions here.
@@ -968,7 +997,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">How do I book for a group event?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Contact info@prim-u.com to book group events and information on our employer subscription
@@ -989,7 +1018,7 @@
                     <div class="faq__question-container faq__question-container_group_primary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">How does Prim-u work?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             We provide an on-demand platform for the empowerment of beauty and wellness entrepreneurs by
@@ -1003,7 +1032,7 @@
                     <div class="faq__question-container faq__question-container_group_primary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">How do you differ from other on-demand beauty companies?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Because we see the bigger picture. One of our major differentiation is
@@ -1017,7 +1046,7 @@
                     <div class="faq__question-container faq__question-container_group_primary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">Are your prices affordable?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Compared to the traditional salon, Prim-U has virtually no overhead, so
@@ -1030,7 +1059,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">Is there anything I'll need to have for my appointment or does the
                                 professional Primlancer provide her or his own equipment and products?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Every Primlancer carries her or his own set of tools and products. Kindly
@@ -1041,7 +1070,7 @@
                     <div class="faq__question-container faq__question-container_group_primary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">How do I know I can trust Prim-U professionals in my home?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Our team of professionals go through a strict vetting process. We also
@@ -1057,7 +1086,7 @@
                     <div class="faq__question-container faq__question-container_group_secondary">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">How should I get ready for a hair-cut appointment?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Wash and condition your hair prior to your appointment
@@ -1068,7 +1097,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">
                                 Should I do anything to my skin before a make-up service?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">Simply cleanse and hydrate your skin prior to a make-up service, and the
                             Primlancer will take care of the rest.
@@ -1078,7 +1107,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">
                                 How should I prepare for strip and band eyelashes?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">Have your eye area cleansed of makeup, mascara, and free of any creams,
                             lotions, or oils.
@@ -1089,7 +1118,7 @@
                             <h4 class="faq__question">
                                 Is it OK if I want the stylist or makeup artist to use some of my
                                 personal products?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">You can speak with your stylist about the products you would like to use.
                         </p>
@@ -1099,7 +1128,7 @@
                             <h4 class="faq__question">
                                 For up-dos, braids, twist, knots, and locks should I do anything
                                 to my hair before the services?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             All you need to do is wash your hair at least 24 hours prior to the styling. Your stylist
@@ -1115,7 +1144,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">Who are the Prim-U Primlancers?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             We have hand-picked each one of our professionally trained stylists and make-up artists.
@@ -1128,7 +1157,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">How do I get ready for my Prim-U appointment?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             For blow-outs, wash your hair prior to the appointment and have a place to sit that is near
@@ -1147,7 +1176,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">Can I select my professional Primlancer?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Yes you can select your Primlancer. It is important to us to provide the most personalized
@@ -1162,7 +1191,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">What services can I request on Prim-U?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Male Grooming, Hair, Make up, Massages, Nails, Facials, Waxing, Brows and Lashes. New on the
@@ -1174,7 +1203,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">How much should I tip my Primlencer?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             It is up to you. All our Primlancers are professionals in their field and are passionate
@@ -1185,7 +1214,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">What is Prim-U’s cancellation policy?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             We know that things change, so we make it easy for you to cancel your reservations. If you
@@ -1215,7 +1244,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">When can I request a Prim-U service?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Prim-U services are available from 8:00 am and our last appointment time is at 10:00pm,
@@ -1228,7 +1257,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">I love Prim-U. How do I promote it?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             We appreciate the love! Go ahead and invite your friends and family to use Prim-U. Or simply
@@ -1242,7 +1271,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">How do I contact Prim-U?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             You can contact our Customer Service via email or phone. Call us at 0600703045 or email us
@@ -1254,7 +1283,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">Is there a limit to how often I can get my hair or make-up done
                                 by Prim-U?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             No, not at all. We encourage you to enjoy our services as often as possible.
@@ -1265,7 +1294,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">I just want advice for my hair, can I still reach out to Prim-U?
                             </h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             No, unfortunately we do not have that individual service available. However, if you do have
@@ -1278,7 +1307,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">Who do I contact Prim-U if I am not satisfied with my services?
                             </h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             View the contact us section to see out contact details
@@ -1289,7 +1318,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">Who do I contact if my Primlancer (s) went above and beyond for
                                 me?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Please call us at 0600703045 or send us an email to info@prim-u.com. We are certain that our
@@ -1300,7 +1329,7 @@
                     <div class="faq__question-container faq__question-container_group_tertiary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">Does Prim-U provide services for children?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Yes, we do.
@@ -1311,7 +1340,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question ">The weather (rain, snow, etc.) messed up my (hair, make-up), can
                                 I get a Prim-U stylist to come and fix it for free?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Yes. Your satisfaction is of utmost importance to us.
@@ -1327,7 +1356,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">Do you provide services for men?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Yes, we do.
@@ -1337,7 +1366,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">Can I book an appointment within the hour I need the service?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             We suggest booking at least 3 hours before you need your appointment to give our Primlancer
@@ -1348,7 +1377,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">How do I prepare for my hair cut?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Grab a seat and relax. All we ask is that you position your chair in an area where our
@@ -1360,7 +1389,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">When do I pay for my appointment?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             After you book an appointment with us, the full amount will be placed on charge to secure
@@ -1371,7 +1400,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">Do you accept cash?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             We only accept credit, debit cards and mobile money payments for booking. This allows us to
@@ -1382,7 +1411,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">Do I need to let Prim-U know if I have pets?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Yes you should let Prim-U customer service know if you have pets for the right professional
@@ -1394,7 +1423,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">May I book two appointments at the same time?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Yes, you may.
@@ -1404,7 +1433,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">How do I reach Prim-U for press inquiries?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Please send us an email to info@prim-u.com
@@ -1414,7 +1443,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">What do I do if a Primlancer does not show up?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             If that happens, please give us a call at 0600703045 or send us an email at info@prim-u.com
@@ -1425,7 +1454,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">What do you require from us?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Reserve an area/conference room ( approximately 25 square feet per primlancer) to set up
@@ -1437,7 +1466,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">I would like a custom service. How do I request it?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Prim-U tries its best to provide the best and most comprehensive list of services. We can
@@ -1452,7 +1481,7 @@
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">What specific services do you provide? What are the prices? How
                                 long do they take?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             The cost of services includes all petrol, travel, products, and service costs.
@@ -1463,7 +1492,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">What are your Terms and Conditions?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             You can find our Terms and Conditions here.
@@ -1473,7 +1502,7 @@
                     <div class="faq__question-container faq__question-container_group_quaternary ">
                         <div class="faq__question-subcontainer">
                             <h4 class="faq__question">How do I book for a group event?</h4>
-                            <img src="./images/faq-open.png" alt="Open question" class="faq__question-toggle">
+                            <img src="./images/faq-open.svg" alt="Open question" class="faq__question-toggle">
                         </div>
                         <p class="faq__answer">
                             Contact info@prim-u.com to book group events and information on our employer subscription
@@ -1507,20 +1536,20 @@
             <h2 class="footer__column-heading">PRIM-U APP &copy; 2020</h2>
             <ul class="footer__column-link-container">
                 <li class="footer__link-wrapper">
-                    <a href="https://www.prim-u.app/en/list" rel="noopener noreferrer"
-                        class="footer__column-link">Prim-U App</a>
+                    <a href="https://www.prim-u.app/en/list" class="footer__column-link" rel="noopener noreferrer"
+                        target="_blank">Prim-U App</a>
                 </li>
                 <li class="footer__link-wrapper">
-                    <a href="https://prim-u.com/privacy-policy/" rel="noopener noreferrer"
-                        class="footer__column-link">Prim-U Privacy Policy</a>
+                    <a href="https://prim-u.com/privacy-policy/" class="footer__column-link" rel="noopener noreferrer"
+                        target="_blank">Prim-U Privacy Policy</a>
                 </li>
                 <li class="footer__link-wrapper">
-                    <a href="https://prim-u.com/ucg-policy/" rel="noopener noreferrer"
-                        class="footer__column-link">Prim-U User Generated Content
+                    <a href="https://prim-u.com/ucg-policy/" class="footer__column-link" rel="noopener noreferrer"
+                        target="_blank">Prim-U User Generated Content
                         Policy</a>
                 </li>
                 <li class="footer__link-wrapper">
-                    <a href="https://prim-u.com/terms-of-use/" rel="noopener noreferrer"
+                    <a href="https://prim-u.com/terms-of-use/" rel="noopener noreferrer" target="_blank"
                         class="footer__column-link">Prim-U Website Terms of
                         Use</a>
                 </li>
@@ -1531,7 +1560,7 @@
             <ul class="footer__column-link-container">
                 <li class="footer__link-wrapper">
                     <a href="mailto:hello@prim-u.com" rel="noopener noreferrer" class="footer__column-link"
-                        target="_blank" rel="noopener noreferrer" aria-label="Eamil Us">hello@prim-u.com</a>
+                        target="_blank" rel="noopener noreferrer" aria-label="Email Us">hello@prim-u.com</a>
                 </li>
                 <li class="footer__link-wrapper">
                     <a href="tel:+311234567" rel="noopener noreferrer" class="footer__column-link"

@@ -205,11 +205,11 @@ function setQuestionListeners() {
       if (!questionOpen) {
         question.classList.add('faq__question-subcontainer_open');
         answer.classList.add('faq__answer_open');
-        toggle.src = './images/faq-close.png';
+        toggle.src = './images/faq-close.svg';
       } else {
         question.classList.remove('faq__question-subcontainer_open');
         answer.classList.remove('faq__answer_open');
-        toggle.src = './images/faq-open.png';
+        toggle.src = './images/faq-open.svg';
       }
     });
   });
