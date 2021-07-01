@@ -2,7 +2,7 @@
   padding: 20px 10px 60px;
   max-width: 1880px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: auto;
 }
 .card__items {
@@ -46,11 +46,11 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   border-radius: 20px;
@@ -70,15 +70,15 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 20px;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .card__paragraphs {
   display: -webkit-box;
@@ -86,11 +86,11 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .card__text {
   color: #fff;
@@ -105,6 +105,12 @@
 .card__text_type_first {
   padding-bottom: 20px;
 }
+
+.card__button-wrapper {
+  color: inherit;
+  text-decoration: none;
+}
+
 .card__button {
   display: block;
   color: #683d83;
@@ -174,21 +180,21 @@
   }
 }
 
-@media  only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .card {
     padding: 60px 60px;
   }
   .card__sub-content {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
   .card__text {
     padding: 0;
@@ -197,7 +203,7 @@
     padding-bottom: 32px;
   }
 }
-@media  only screen and (min-width: 1700px) {
+@media only screen and (min-width: 1700px) {
   .card {
     margin: auto;
   }
