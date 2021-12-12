@@ -10,12 +10,11 @@ service providers and suppliers with customers.
 
 ### Mobile
 
-![Demonstration](./src/images/demo.gif)
+![Mobile Demo](https://user-images.githubusercontent.com/74033573/145725601-78fd716a-bb0d-4790-baa9-5436d0810d21.png)
 
 ### Desktop
 
-![Demonstration](./src/images/demo.png)
-
+![Desktop Demo](https://user-images.githubusercontent.com/74033573/145725607-a66e7ef8-90cd-4e8b-a89b-cc47e61c0a4f.gif)
 
 ---
 ## 🛠 Technologies
