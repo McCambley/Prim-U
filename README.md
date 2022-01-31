@@ -4,7 +4,7 @@
 - This project is the landing page for the South African beauty company [PRIM-U](https://prim-u.com/)
 - Prim-U – is a beauty & wellness platform that connects professional
 service providers and suppliers with customers.
-## ✨ Demo
+## ✨ Screenshots - [Live Demo](https://youtu.be/g9YNXG74x9o)
 
 ---
 
