@@ -1,4 +1,4 @@
-# [Prim-U Landing Page](https://mccambley.github.io/Prim-U/)
+# Prim-U Landing Page
 ## 📣 Overview
 
 - This project is the landing page for the South African beauty company [PRIM-U](https://prim-u.com/)
